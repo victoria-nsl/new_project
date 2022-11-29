@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Кастомные свойства -цвета */
+
+:root {
+  --basic-white: #ffffff;
+  --basic-white-rgb: 255, 255, 255;
+  --basic-black: #000000;
+  --basic-black-rgb: 0, 0, 0;
+  --basic-black-l: #231f20;
+  --basic-black-light: #283136;
+  --basic-grey-dark: #444444;
+  --basic-grey-dark-rgb: 68, 68, 68;
+  --basic-grey--dark-l: #4d4d4d;
+  --basic-grey: #666666;
+  --basic-grey-ld: #c1c1c1;
+  --basic-grey-light-l: #dbdbdb;
+  --basic-grey-light: #e1e1e1;
+  --basic-grey-extra-light: #eeeeee;
+  --basic-grey-modal: #d7dcde;
+  --special-grey-active: #a6a6a6;
+  --special-grey-hover: #dfdfdf;
+  --special-grey-hover-modal: #b4b9bb;
+  --special-grey-active-catalog: #d5d5d5;
+  --special-grey-active-range: #ababab;
+  --basic-red: #fb565a;
+  --special-red-hover: #e74246;
+  --special-red-active: #d7373b;
+  --basic-green: #00ca74;
+  --special-green-hover: #00bc6c;
+  --special-green-active: #00aa62;
+  --basic-yellow: #efc849;
+  --special-yellow-hover: #eab534;
+  --special-yellow-active: #e5a722;
+}
+
+/* ГЛОБАЛЬНЫЕ СТИЛИ */
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  position: relative;
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
