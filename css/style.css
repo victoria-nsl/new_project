@@ -52,7 +52,6 @@ body {
   min-height: 100%;
 
   font-family: "Inter", "Arial", sans-serif;
-  font-weight: 400;
   font-style: normal;
   color: var(--basic-white);
 
@@ -67,7 +66,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--basic-black);
+  color: var(--basic-white);
 }
 
 img {
@@ -86,4 +85,45 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+/*-------------------ШАПКА------------------------*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.navigation__wrapper-list {
+  display: flex;
+  justify-content: space-between;
+  width: 857px;
+}
+
+.navigation__site-list {
+  display: flex;
+  justify-content: space-between;
+  width: 544px;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__site-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.navigation__user-list {
+  display: flex;
+  justify-content: space-between;
+  width: 273px;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
