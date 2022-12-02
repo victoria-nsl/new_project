@@ -144,99 +144,7 @@ img {
   opacity: 0.8;
 }
 
-/*-------------------ШАПКА----------------------------------------------------------*/
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.navigation__logo-link img {
-  width: 112px;
-  height: 32px;
-}
-
-.navigation__wrapper-list {
-  display: flex;
-  justify-content: space-between;
-  width: 857px;
-}
-
-.navigation__site-list {
-  display: flex;
-  align-items: center;
-  column-gap: 40px;
-  row-gap: 10px;
-  flex-wrap: wrap;
-  width: 544px;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.navigation__site-link {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.navigation__site-link[href]:hover {
-  opacity: 0.8;
-}
-
-.navigation__user-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 273px;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-/*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
-/*----------FAQ--------------------------------*/
-.faq {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 100px;
-}
-
-.faq__title {
-  margin: 0;
-  margin-bottom: 50px;
-
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.faq__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 38px;
-}
-
-.faq__wrapper-img {
-  width: 586px;
-}
-
-.faq__wrapper-img img {
-  width: 586px;
-  height: 301px;
-}
-
-.faq__wrapper-accordion {
-  width: 624px;
-}
-
-/* Аккордион */
+/*------------------АККОРДИОН-------------------*/
 .accordion__list {
   margin: 0;
   padding: 0;
@@ -324,6 +232,132 @@ img {
 
 .accordion__item--closed .accordion__description {
   display: none;
+}
+
+/*-------------------ШАПКА----------------------------------------------------------*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.navigation__logo-link img {
+  width: 112px;
+  height: 32px;
+}
+
+.navigation__wrapper-list {
+  display: flex;
+  justify-content: space-between;
+  width: 857px;
+}
+
+.navigation__site-list {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  width: 544px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navigation__site-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.navigation__site-link[href]:hover {
+  opacity: 0.8;
+}
+
+.navigation__user-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 273px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
+
+/*----------Как установить платформу------------*/
+.platform-installation {
+  margin-bottom: 200px;
+}
+
+.platform-installation__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.platform-installation__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-installation__wrapper-accordion {
+  width: 624px;
+}
+
+.platform-installation__wrapper-video {
+  width: 624px;
+  height: 336px;
+
+  background-color: var(--text-grey);
+  background-image: url("../img/background-video.jpg");
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+/*----------FAQ--------------------------------*/
+.faq {
+  margin-bottom: 200px;
+}
+
+.faq__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.faq__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 38px;
+}
+
+.faq__wrapper-img {
+  width: 586px;
+}
+
+.faq__wrapper-img img {
+  width: 586px;
+  height: 301px;
+}
+
+.faq__wrapper-accordion {
+  width: 624px;
 }
 
 /*----------Контакты--------------------------*/
