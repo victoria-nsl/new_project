@@ -35,7 +35,9 @@
 :root {
   --basic-white: #ffffff;
   --basic-black: #171717;
+  --basic-grey: #252525;
   --text-grey: #8f8f8f;
+  --border-grey: #545454;
   --button-blue: #00a0ff;
   --button-green: #00f6b6;
 }
@@ -126,7 +128,6 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  text-align: center;
   color: var(--basic-white);
 
   border: 1px solid var(--basic-white);
@@ -146,6 +147,11 @@ img {
   padding: 8px 0;
 }
 
+.navigation__logo-link img {
+  width: 112px;
+  height: 32px;
+}
+
 .navigation__wrapper-list {
   display: flex;
   justify-content: space-between;
@@ -154,14 +160,14 @@ img {
 
 .navigation__site-list {
   display: flex;
+  align-items: center;
   column-gap: 40px;
   row-gap: 10px;
   flex-wrap: wrap;
   width: 544px;
-  align-items: center;
-
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -178,12 +184,106 @@ img {
 .navigation__user-list {
   display: flex;
   justify-content: space-between;
-  width: 273px;
   align-items: center;
-
+  width: 273px;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 /*-------------------ПОДВАЛ-----------------------*/
+.footer {
+  background-color: var(--basic-grey);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/*------------Вверхнее меню-----------------------*/
+.footer__inner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.footer__logo-link img {
+  width: 112px;
+  height: 32px;
+}
+
+.footer__wrapper-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: 1050px;
+}
+
+.footer__site-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__site-link {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-white);
+
+  cursor: pointer;
+}
+
+.footer__site-link[href]:hover {
+  opacity: 0.8;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 10px;
+  width: 144px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.footer__social-link:hover {
+  opacity: 0.8;
+}
+
+.footer__social-link--instagram img {
+  width: 17px;
+  height: 17px;
+}
+
+.footer__social-link--twitter img {
+  width: 16px;
+  height: 13px;
+}
+
+.footer__social-link--youtube img {
+  width: 17px;
+  height: 13px;
+}
