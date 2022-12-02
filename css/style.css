@@ -35,7 +35,9 @@
 :root {
   --basic-white: #ffffff;
   --basic-black: #171717;
-  --basic-grey: #8f8f8f;
+  --text-grey: #8f8f8f;
+  --button-blue: #00a0ff;
+  --button-green: #00f6b6;
 }
 
 /* ГЛОБАЛЬНЫЕ СТИЛИ */
@@ -86,6 +88,56 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/*---------------------КНОПКИ---------------------*/
+.button-blue {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--basic-black);
+
+  border-radius: 8px;
+  background: linear-gradient(
+    99.35deg,
+    var(--button-green) 22.49%,
+    var(--button-blue) 86.94%
+  );
+}
+
+.button-blue:hover {
+  opacity: 0.8;
+}
+
+.button-blue--nav {
+  padding: 8px 24px;
+}
+
+.button-navigation {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 24px;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: var(--basic-white);
+
+  border: 1px solid var(--basic-white);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.button-navigation:hover {
+  opacity: 0.8;
+}
+
 /*-------------------ШАПКА------------------------*/
 .navigation {
   display: flex;
@@ -102,7 +154,9 @@ img {
 
 .navigation__site-list {
   display: flex;
-  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 10px;
+  flex-wrap: wrap;
   width: 544px;
   align-items: center;
 
@@ -117,6 +171,10 @@ img {
   line-height: 22px;
 }
 
+.navigation__site-link[href]:hover {
+  opacity: 0.8;
+}
+
 .navigation__user-list {
   display: flex;
   justify-content: space-between;
@@ -127,3 +185,5 @@ img {
   padding: 0;
   list-style: none;
 }
+
+/*-------------------ПОДВАЛ-----------------------*/
