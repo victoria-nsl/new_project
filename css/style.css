@@ -1,3 +1,4 @@
+/* ШРИФТЫ */
 @font-face {
   font-family: "Inter";
   src: url("../fonts/interregular.woff2") format("woff2"),
@@ -30,14 +31,13 @@
   font-style: normal;
 }
 
-/* Кастомные свойства -цвета */
-
+/* КАСТОМНЫЕ СВОЙСТВА - ЦВЕТ */
 :root {
   --basic-white: #ffffff;
   --basic-black: #171717;
   --basic-grey: #252525;
   --text-grey: #8f8f8f;
-  --footer-grey: #545454;
+  --dark-grey: #545454;
   --button-blue: #00a0ff;
   --button-green: #00f6b6;
 }
@@ -119,6 +119,10 @@ img {
   padding: 8px 24px;
 }
 
+.button-blue--contacts {
+  padding: 16px 40px;
+}
+
 .button-navigation {
   display: inline-block;
   vertical-align: middle;
@@ -139,7 +143,7 @@ img {
   opacity: 0.8;
 }
 
-/*-------------------ШАПКА------------------------*/
+/*-------------------ШАПКА----------------------------------------------------------*/
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -192,11 +196,90 @@ img {
   list-style: none;
 }
 
-/*-------------------ПОДВАЛ-----------------------*/
-.footer {
+/*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
+
+/*----------Контакты--------------------------*/
+.contacts {
+  margin-bottom: 100px;
+}
+
+.contacts__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.contacts__inner {
+  padding: 23px 0;
+
+  background-color: var(--text-grey);
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contacts__card {
+  width: 672px;
+  padding: 20px;
+  box-sizing: border-box;
+
   background-color: var(--basic-grey);
+  border-radius: 16px;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts__item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.contacts__item h3 {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.contacts__item p {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__link:hover {
+  opacity: 0.8;
+}
+
+/*-------------------ПОДВАЛ--------------------------------------------------------*/
+.footer {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  background-color: var(--basic-grey);
 }
 
 /*------------Вверхнее меню-----------------------*/
@@ -206,7 +289,7 @@ img {
   align-items: center;
   padding-bottom: 18px;
 
-  border-bottom: 1px solid var(--footer-grey);
+  border-bottom: 1px solid var(--dark-grey);
 }
 
 .footer__logo-link img {
@@ -300,7 +383,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: var(--footer-grey);
+  color: var(--dark-grey);
 }
 
 .footer__links {
@@ -314,7 +397,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: var(--footer-grey);
+  color: var(--dark-grey);
 }
 
 .footer__link:hover {
