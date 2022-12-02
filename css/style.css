@@ -120,6 +120,12 @@ img {
   padding: 8px 24px;
 }
 
+.button-blue--tariffs {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
 .button-blue--contacts {
   padding: 16px 40px;
 }
@@ -141,6 +147,29 @@ img {
 }
 
 .button-navigation:hover {
+  opacity: 0.8;
+}
+
+.button-tariffs {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--button-green);
+  text-align: center;
+
+  border: 1px solid var(--basic-grey);
+  border-radius: 8px;
+  background-color: var(--basic-grey);
+}
+
+.button-tariffs:hover {
   opacity: 0.8;
 }
 
@@ -288,6 +317,130 @@ img {
 }
 
 /*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
+/*----------Главный экран----------------------*/
+.main-screen {
+  margin-bottom: 100px;
+}
+
+/*----------Тарифы-------------------------------*/
+.tariffs {
+  margin-bottom: 200px;
+}
+
+.tariffs__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.tariffs__description {
+  width: 548px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.tariffs__link {
+  color: var(--button-blue);
+}
+
+.tariffs__link:hover {
+  opacity: 0.8;
+}
+
+.tariffs__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tariffs__item {
+  width: 624px;
+  padding: 40px 24px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--dark-grey);
+  border-radius: 16px;
+}
+
+.tariffs__inner-item {
+  margin-bottom: 40px;
+}
+
+.tariffs__title-item {
+  margin: 0;
+  margin-bottom: 11px;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.tariffs__title-item--light {
+  color: var(--button-green);
+}
+
+.tariffs__description-item {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-grey);
+}
+
+.tariffs__description-item--light {
+  color: var(--button-green);
+}
+
+.tariffs__price-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.tariffs__price-item span:first-child {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+}
+
+.tariffs__price-item--light span:first-child {
+  background: linear-gradient(
+    99.35deg,
+    var(--button-green) 22.49%,
+    var(--button-blue) 86.94%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: table;
+}
+
+.tariffs__price-item span:last-child {
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--text-grey);
+}
+
+.tariffs__price-item--light span:last-child {
+  color: var(--button-green);
+}
 
 /*----------Как установить платформу------------*/
 .platform-installation {
