@@ -37,7 +37,7 @@
   --basic-black: #171717;
   --basic-grey: #252525;
   --text-grey: #8f8f8f;
-  --border-grey: #545454;
+  --footer-grey: #545454;
   --button-blue: #00a0ff;
   --button-green: #00f6b6;
 }
@@ -206,7 +206,7 @@ img {
   align-items: center;
   padding-bottom: 18px;
 
-  border-bottom: 1px solid var(--border-grey);
+  border-bottom: 1px solid var(--footer-grey);
 }
 
 .footer__logo-link img {
@@ -240,8 +240,6 @@ img {
   font-size: 18px;
   line-height: 22px;
   color: var(--basic-white);
-
-  cursor: pointer;
 }
 
 .footer__site-link[href]:hover {
@@ -286,4 +284,39 @@ img {
 .footer__social-link--youtube img {
   width: 17px;
   height: 13px;
+}
+
+/*------------Нижнее меню-----------------------*/
+.footer__inner-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.footer__copyright {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--footer-grey);
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 557px;
+}
+
+.footer__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--footer-grey);
+}
+
+.footer__link:hover {
+  opacity: 0.8;
 }
