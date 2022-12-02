@@ -71,6 +71,7 @@ body {
 a {
   text-decoration: none;
   color: var(--basic-white);
+  transition: all 0.2s ease-in-out;
 }
 
 img {
@@ -197,6 +198,133 @@ img {
 }
 
 /*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
+/*----------FAQ--------------------------------*/
+.faq {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+
+.faq__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.faq__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 38px;
+}
+
+.faq__wrapper-img {
+  width: 586px;
+}
+
+.faq__wrapper-img img {
+  width: 586px;
+  height: 301px;
+}
+
+.faq__wrapper-accordion {
+  width: 624px;
+}
+
+/* Аккордион */
+.accordion__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background-color: transparent;
+}
+
+.accordion__item {
+  border-bottom: 1px solid var(--dark-grey);
+}
+
+.accordion__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.accordion__button {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--button-blue);
+  text-align: start;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion__button:hover {
+  opacity: 0.8;
+}
+
+.accordion__button::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+
+  width: 24px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.accordion__item--active .accordion__button::before {
+  background-image: url("../img/back-icon-opened.svg");
+}
+
+.accordion__item--closed .accordion__button::before {
+  background-image: url("../img/back-icon-closed.svg");
+}
+
+.accordion__description {
+  width: 100%;
+  padding-bottom: 6px;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  overflow: hidden;
+}
+
+.accordion__item--active .accordion__description {
+  display: block;
+}
+
+.accordion__item--closed .accordion__description {
+  display: none;
+}
 
 /*----------Контакты--------------------------*/
 .contacts {
