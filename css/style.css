@@ -322,6 +322,90 @@ img {
 .main-screen {
   margin-bottom: 100px;
 }
+
+/*----------Почему еще стоит выбрать нас?----------*/
+.why-us {
+  margin-bottom: 200px;
+}
+
+.why-us__title {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.why-us__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-us__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 730px;
+  column-gap: 30px;
+  row-gap: 38px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.why-us__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 160px;
+}
+
+.why-us__title-item {
+  order: 2;
+  margin: 0;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.why-us__wrapper-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  order: 1;
+  margin-bottom: 10px;
+}
+
+.why-us__wrapper-description {
+  width: 515px;
+  padding-top: 32px;
+}
+
+.why-us__subtitle {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.why-us__description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
 /*----------Helpdesk-------------------------------*/
 .helpdesk {
   display: flex;
@@ -384,7 +468,6 @@ img {
 
 .our-customer__list {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   row-gap: 80px;
