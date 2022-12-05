@@ -37,6 +37,7 @@
   --basic-black: #171717;
   --basic-grey: #252525;
   --text-grey: #8f8f8f;
+  --text-red: #d91515;
   --dark-grey: #545454;
   --button-blue: #00a0ff;
   --button-green: #00f6b6;
@@ -367,15 +368,26 @@ img {
 
 .tariffs__item {
   width: 624px;
-  padding: 40px 24px;
+  padding: 40px 24px 20px 24px;
   box-sizing: border-box;
 
   border: 1px solid var(--dark-grey);
   border-radius: 16px;
 }
 
+.tariffs__item--light {
+  padding: 36px 24px 20px 24px;
+
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background: linear-gradient(to right, var(--basic-grey), var(--basic-grey)),
+    linear-gradient(90deg, var(--button-green), var(--button-blue));
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
 .tariffs__inner-item {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .tariffs__title-item {
@@ -440,6 +452,50 @@ img {
 
 .tariffs__price-item--light span:last-child {
   color: var(--button-green);
+}
+
+.tariffs__list-detailing {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.tariffs__item-detailing {
+  position: relative;
+
+  padding-left: 49px;
+  margin-bottom: 25px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.tariffs__item-detailing::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  background-color: var(--basic-grey);
+  background-image: url("../img/background-icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tariffs__item-detailing--not::before {
+  background-image: url("../img/background-icon-cross.svg");
+}
+
+.tariffs__item-detailing--not {
+  color: var(--text-red);
 }
 
 /*----------Как установить платформу------------*/
