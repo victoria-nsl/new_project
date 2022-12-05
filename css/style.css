@@ -322,6 +322,46 @@ img {
 .main-screen {
   margin-bottom: 100px;
 }
+/*----------Helpdesk-------------------------------*/
+.helpdesk {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 200px;
+}
+
+.helpdesk__title {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: start;
+}
+
+.helpdesk__description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: start;
+}
+
+.helpdesk__wrapper-description {
+  width: 515px;
+}
+
+.helpdesk__wrapper-img {
+  width: 733px;
+}
+
+.helpdesk__wrapper-img img {
+  width: 733px;
+  height: 478px;
+}
+
 /*----------Для кого наша платформа----------------*/
 .our-customer {
   margin-bottom: 200px;
