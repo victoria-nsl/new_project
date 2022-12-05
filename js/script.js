@@ -1,6 +1,6 @@
 /*---------------Aккордион--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
-  ".accordion--platform-installation"
+  ".accordion__list--platform-installation"
 );
 const itemsAccordionPlatformInstallation =
   blockAccordionPlatformInstallation.querySelectorAll(".accordion__item");
