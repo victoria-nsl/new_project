@@ -1,4 +1,4 @@
-/*---------------Aккордион--------------*/
+/*---------------Aккордeон--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
 );

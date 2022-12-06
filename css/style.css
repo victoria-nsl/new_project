@@ -217,7 +217,7 @@ img {
   line-height: 48px;
 }
 
-/*------------------АККОРДИОН-------------------*/
+/*------------------АККОРДEОН-------------------*/
 .accordion__list {
   margin: 0;
   padding: 0;
@@ -367,13 +367,14 @@ img {
 /*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
 /*----------Главный экран----------------------*/
 .main-screen {
-  margin-bottom: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 97px;
+  margin-bottom: 23px;
 
   background-image: url("../img/waves-main-screen.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: left 280px;
+  background-position: left bottom;
+  background-clip: content-box;
 }
 
 .main-screen__inner {
@@ -442,12 +443,47 @@ img {
 }
 
 .main-screen__wrapper-img {
-  width: 656px;
-}
+  position: relative;
 
-.main-screen__wrapper-img img {
   width: 656px;
   height: 602px;
+}
+
+.main-screen__wrapper-img img:nth-child(1) {
+  position: absolute;
+  top: 60px;
+  right: 0;
+
+  width: 218px;
+  height: 159px;
+}
+
+.main-screen__wrapper-img img:nth-child(2) {
+  position: absolute;
+  top: 239px;
+  right: 0;
+  z-index: 10;
+
+  width: 479px;
+  height: 212px;
+}
+
+.main-screen__wrapper-img img:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 32px;
+
+  width: 383px;
+  height: 326px;
+}
+
+.main-screen__wrapper-img img:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 479px;
+  height: 217px;
 }
 
 /*----------Гибкая настройка ваших дашбордов-------------*/
