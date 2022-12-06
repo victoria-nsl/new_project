@@ -121,6 +121,12 @@ img {
   padding: 8px 24px;
 }
 
+.button-blue--main-screen {
+  width: 299px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
 .button-blue--tariffs {
   width: 100%;
   padding: 16px;
@@ -330,6 +336,45 @@ img {
 /*----------Главный экран----------------------*/
 .main-screen {
   margin-bottom: 100px;
+}
+
+/*----------Гибкая настройка ваших дашбордов-------------*/
+.dashboard-settings {
+  margin-bottom: 200px;
+}
+
+.dashboard-settings__wrapper-description {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.dashboard-settings__title {
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+
+.dashboard-settings__description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.dashboard-settings__wrapper-video {
+  width: 842px;
+  height: 488px;
+  margin: 0 auto;
+
+  background-color: transparent;
+
+  background-image: url("../img/background-video-dashboard-settings.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  border-radius: 16px;
 }
 
 /*----------Визуализируйте данные без программирования--*/
