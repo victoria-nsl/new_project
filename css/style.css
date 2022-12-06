@@ -332,6 +332,40 @@ img {
   margin-bottom: 100px;
 }
 
+/*----------Визуализируйте данные без программирования--*/
+.data-visualization {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 95px;
+}
+
+.data-visualization__wrapper-description {
+  width: 515px;
+}
+
+.data-visualization__title {
+  margin-bottom: 24px;
+
+  text-align: start;
+}
+
+.data-visualization__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.data-visualization__wrapper-img {
+  width: 733px;
+}
+
+.data-visualization__wrapper-img img {
+  width: 733px;
+  height: 488px;
+}
+
 /*----------Выгрузка отчета----------------------------*/
 .report-upload {
   padding-top: 100px;
