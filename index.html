@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="container">
+    <header class="page-header container">
       <nav class="navigation">
         <a class="navigation__logo-link">
           <img
@@ -45,13 +45,13 @@
     </header>
 
     <main>
-      <section class="main-screen">
-        <div class="container">
+      <div class="main-screen">
+        <div class="main-screen__inner container">
           <div class="main-screen__wrapper-description">
             <h1 class="main-screen__title">
               Визуализация данных для малого и среднего бизнеса
             </h1>
-            <p>
+            <p class="main-screen__description">
               Как систематизировать и улучшить свой бизнес с помощью
               интерактивных дашбордов
             </p>
@@ -63,17 +63,18 @@
             <div class="main-screen__wrapper-info">
               <span
                 >Мы используем куки, чтобы пользоваться сайтом было
-                удобнее.</span
+                удобнее.&nbsp;
+                <a class="main-screen__link" href="#">Подробнее</a></span
               >
-              <a class="main-screen__link">Подробнее</a>
-              <button type="button">OК</button>
+
+              <button type="button" class="button__main-screen">OК</button>
             </div>
           </div>
           <div class="main-screen__wrapper-img">
             <img src="img/main-screen.png" width="656" height="602" alt="" />
           </div>
         </div>
-      </section>
+      </div>
 
       <section class="dashboard-settings container">
         <div class="dashboard-settings__wrapper-description">
@@ -673,19 +674,6 @@
               </li>
             </ul>
             <ul class="footer__social-list">
-              <li class="footer__social-item">
-                <a
-                  class="footer__social-link footer__social-link--instagram"
-                  href="#"
-                >
-                  <img
-                    src="img/icon-instagram.svg"
-                    width="17"
-                    height="17"
-                    alt="Иконка Инстаграм"
-                  />
-                </a>
-              </li>
               <li class="footer__social-item">
                 <a
                   class="footer__social-link footer__social-link--twitter"

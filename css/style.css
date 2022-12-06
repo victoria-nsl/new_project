@@ -36,9 +36,10 @@
   --basic-white: #ffffff;
   --basic-black: #171717;
   --basic-grey: #252525;
+  --dark-grey: #545454;
+  --light-grey: #e8edfb;
   --text-grey: #8f8f8f;
   --text-red: #d91515;
-  --dark-grey: #545454;
   --blue: #00a0ff;
   --green: #00f6b6;
 }
@@ -125,6 +126,8 @@ img {
   width: 299px;
   padding: 16px;
   box-sizing: border-box;
+
+  font-weight: 600;
 }
 
 .button-blue--tariffs {
@@ -177,6 +180,31 @@ img {
 }
 
 .button-tariffs:hover {
+  opacity: 0.8;
+}
+
+.button__main-screen {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75px;
+  padding: 6px 24px;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--basic-grey);
+  text-align: center;
+
+  border-radius: 8px;
+  background-color: var(--light-grey);
+  border: none;
+
+  cursor: pointer;
+}
+
+.button__main-screen:hover {
   opacity: 0.8;
 }
 
@@ -280,6 +308,10 @@ img {
 }
 
 /*-------------------ШАПКА----------------------------------------------------------*/
+.page-header {
+  margin-bottom: 64px;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -336,6 +368,86 @@ img {
 /*----------Главный экран----------------------*/
 .main-screen {
   margin-bottom: 100px;
+  padding-bottom: 20px;
+
+  background-image: url("../img/waves-main-screen.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left 280px;
+}
+
+.main-screen__inner {
+  display: flex;
+}
+
+.main-screen__wrapper-description {
+  width: 624px;
+  padding-top: 86px;
+}
+
+.main-screen__title {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 75px;
+}
+
+.main-screen__description {
+  width: 440px;
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.05em;
+  color: var(--text-grey);
+}
+
+.main-screen__wrapper-button {
+  margin-bottom: 77px;
+}
+
+.main-screen__wrapper-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 613px;
+  padding: 8px;
+  box-sizing: border-box;
+
+  border-radius: 16px;
+  background: var(--basic-grey);
+  box-shadow: 0px 10px 20px -4px rgba(0, 0, 0, 0.2);
+}
+
+.main-screen__wrapper-info span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.main-screen__link {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: underline;
+}
+
+.main-screen__link:hover {
+  opacity: 0.8;
+}
+
+.main-screen__wrapper-img {
+  width: 656px;
+}
+
+.main-screen__wrapper-img img {
+  width: 656px;
+  height: 602px;
 }
 
 /*----------Гибкая настройка ваших дашбордов-------------*/
@@ -382,7 +494,7 @@ img {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 95px;
+  margin-bottom: 97px;
 }
 
 .data-visualization__wrapper-description {
@@ -821,6 +933,7 @@ img {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
 }
 
 .tariffs__link {
@@ -981,7 +1094,7 @@ img {
 }
 
 .platform-installation__title {
-  margin-bottom: 50px;
+  margin-bottom: 47px;
 
   text-align: center;
 }
@@ -1077,7 +1190,7 @@ img {
 
 .contacts__item {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   margin-bottom: 10px;
 
   border-bottom: 1px solid var(--dark-grey);
@@ -1123,7 +1236,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 18px;
+  padding-bottom: 15px;
 
   border-bottom: 1px solid var(--dark-grey);
 }
@@ -1171,7 +1284,7 @@ img {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 10px;
-  width: 144px;
+  width: 88px;
   margin: 0;
   padding: 0;
 
