@@ -314,7 +314,6 @@ img {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 8px 0;
 }
@@ -322,6 +321,7 @@ img {
 .navigation__logo-link img {
   width: 112px;
   height: 32px;
+  margin-right: 311px;
 }
 
 .navigation__wrapper-list {
@@ -338,6 +338,7 @@ img {
   flex-wrap: wrap;
   width: 544px;
   margin: 0;
+  margin-right: 40px;
   padding: 0;
 
   list-style: none;
