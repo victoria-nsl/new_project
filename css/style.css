@@ -198,7 +198,7 @@ img {
   opacity: 0.8;
 }
 
-.button__main-screen {
+.button-main-screen {
   display: inline-block;
   vertical-align: middle;
   width: 75px;
@@ -219,7 +219,7 @@ img {
   cursor: pointer;
 }
 
-.button__main-screen:hover {
+.button-main-screen:hover {
   opacity: 0.8;
 }
 
