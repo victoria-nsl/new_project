@@ -1094,7 +1094,7 @@ img {
     var(--green) 22.49%,
     var(--blue) 86.94%
   );
-  background-clip: text;
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: table;
