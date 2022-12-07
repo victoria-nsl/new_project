@@ -49,11 +49,6 @@ triggersPlatformInstallation.forEach((trigger, index) => {
       return;
     }
 
-    itemsAccordionPlatformInstallation.forEach((itemAccordion) => {
-      if (itemAccordion.classList.contains("accordion__item--active")) {
-        hideContent(itemAccordion);
-      }
-    });
     showContent(itemAccordionCurrent);
   });
 });
