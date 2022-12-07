@@ -450,53 +450,68 @@ img {
   height: 602px;
 }
 
-.main-screen__wrapper-images img:nth-child(1) {
+.main-screen__wrapper-images img {
   position: absolute;
-  top: 60px;
-  right: 3px;
 
   display: block;
-  width: 218px;
-  height: 159px;
 
   border-radius: 8px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.main-screen__wrapper-images img:nth-child(1) {
+  top: 60px;
+  right: 0;
+
+  width: 218px;
+  height: 159px;
+}
+
+.main-screen__wrapper-images img:nth-child(1):hover {
+  z-index: 20;
+  transform: scale(1.2) translateX(-18px);
 }
 
 .main-screen__wrapper-images img:nth-child(2) {
-  position: absolute;
   top: 239px;
   right: 0;
   z-index: 10;
 
-  display: block;
   width: 479px;
   height: 212px;
+}
 
-  border-radius: 8px;
+.main-screen__wrapper-images img:nth-child(2):hover {
+  z-index: 20;
+  transform: scale(1.2) translateX(-40px);
 }
 
 .main-screen__wrapper-images img:nth-child(3) {
-  position: absolute;
   top: 0;
   left: 32px;
 
-  display: block;
   width: 383px;
   height: 326px;
+}
 
-  border-radius: 8px;
+.main-screen__wrapper-images img:nth-child(3):hover {
+  z-index: 20;
+  transform: scale(1.2) translateX(34px) translateY(28px);
 }
 
 .main-screen__wrapper-images img:nth-child(4) {
-  position: absolute;
   bottom: 0;
   left: 0;
 
-  display: block;
   width: 479px;
   height: 217px;
+}
 
-  border-radius: 8px;
+.main-screen__wrapper-images img:nth-child(4):hover {
+  z-index: 20;
+  transform: scale(1.2) translateX(40px) translateY(-18px);
 }
 
 /*----------Гибкая настройка ваших дашбордов-------------*/
