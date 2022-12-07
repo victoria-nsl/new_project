@@ -33,6 +33,7 @@
 
 /* КАСТОМНЫЕ СВОЙСТВА - ЦВЕТ */
 :root {
+  --black: #000000;
   --basic-white: #ffffff;
   --basic-black: #171717;
   --basic-grey: #252525;
@@ -80,7 +81,7 @@ body {
 
 @media (max-width: 1439px) {
   .container {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -393,10 +394,25 @@ img {
   background-clip: content-box;
 }
 
+@media (max-width: 1439px) {
+  .main-screen {
+    padding-bottom: 0;
+    margin-bottom: 200px;
+  }
+}
+
 .main-screen__inner {
   display: grid;
   grid-template-columns: 624px 656px;
   grid-template-rows: 1fr min-content;
+}
+
+@media (max-width: 1439px) {
+  .main-screen__inner {
+    grid-template-columns: 1fr 437px;
+    grid-template-rows: 1fr min-content;
+    column-gap: 11px;
+  }
 }
 
 .main-screen__wrapper-description {
@@ -404,8 +420,16 @@ img {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-
   padding-top: 86px;
+  padding-bottom: 77px;
+}
+
+@media (max-width: 1439px) {
+  .main-screen__wrapper-description {
+    padding-bottom: 63px;
+    min-height: 465px;
+    box-sizing: border-box;
+  }
 }
 
 .main-screen__title {
@@ -415,6 +439,13 @@ img {
   font-weight: 700;
   font-size: 62px;
   line-height: 75px;
+}
+
+@media (max-width: 1439px) {
+  .main-screen__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 .main-screen__description {
@@ -429,8 +460,12 @@ img {
   color: var(--text-grey);
 }
 
-.main-screen__wrapper-button {
-  margin-bottom: 77px;
+@media (max-width: 1439px) {
+  .main-screen__description {
+    width: 100%;
+
+    font-size: 18px;
+  }
 }
 
 .main-screen__wrapper-info {
@@ -440,18 +475,34 @@ img {
   grid-row-end: 3;
 }
 
+@media (max-width: 1439px) {
+  .main-screen__wrapper-info {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+
 .main-screen__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 613px;
   padding: 8px;
   box-sizing: border-box;
 
   border-radius: 16px;
   background: var(--basic-grey);
-  box-shadow: 0px 10px 20px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px -4px rgba(var(--black), 0.2);
+}
+
+@media (max-width: 1439px) {
+  .main-screen__info {
+    justify-content: center;
+    width: 864px;
+    margin: 0 auto;
+  }
 }
 
 .main-screen__wrapper-info span {
@@ -471,6 +522,12 @@ img {
   opacity: 0.8;
 }
 
+@media (max-width: 1439px) {
+  .main-screen__button {
+    margin-left: 16px;
+  }
+}
+
 .main-screen__wrapper-images {
   position: relative;
 
@@ -478,11 +535,20 @@ img {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-
   height: 602px;
 }
 
-.main-screen__wrapper-images img {
+@media (max-width: 1439px) {
+  .main-screen__wrapper-images {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 402px;
+  }
+}
+
+.main-screen__img {
   position: absolute;
 
   display: block;
@@ -493,7 +559,7 @@ img {
   cursor: pointer;
 }
 
-.main-screen__wrapper-images img:nth-child(1) {
+.main-screen__img--1 {
   top: 60px;
   right: 0;
 
@@ -501,12 +567,28 @@ img {
   height: 159px;
 }
 
-.main-screen__wrapper-images img:nth-child(1):hover {
+@media (max-width: 1439px) {
+  .main-screen__img--1 {
+    top: 40px;
+    right: 0;
+
+    width: 145px;
+    height: 106px;
+  }
+}
+
+.main-screen__img--1:hover {
   z-index: 20;
   transform: scale(1.2) translateX(-18px);
 }
 
-.main-screen__wrapper-images img:nth-child(2) {
+@media (max-width: 1439px) {
+  .main-screen__img--1:hover {
+    transform: scale(1.2) translateX(-12px);
+  }
+}
+
+.main-screen__img--2 {
   top: 239px;
   right: 0;
   z-index: 10;
@@ -515,12 +597,28 @@ img {
   height: 212px;
 }
 
-.main-screen__wrapper-images img:nth-child(2):hover {
+@media (max-width: 1439px) {
+  .main-screen__img--2 {
+    top: 159px;
+    right: 0;
+
+    width: 319px;
+    height: 141px;
+  }
+}
+
+.main-screen__img--2:hover {
   z-index: 20;
   transform: scale(1.2) translateX(-40px);
 }
 
-.main-screen__wrapper-images img:nth-child(3) {
+@media (max-width: 1439px) {
+  .main-screen__img--2:hover {
+    transform: scale(1.2) translateX(-28px);
+  }
+}
+
+.main-screen__img--3 {
   top: 0;
   left: 32px;
 
@@ -528,12 +626,28 @@ img {
   height: 326px;
 }
 
-.main-screen__wrapper-images img:nth-child(3):hover {
+@media (max-width: 1439px) {
+  .main-screen__img--3 {
+    top: 0;
+    left: 21px;
+
+    width: 255px;
+    height: 217px;
+  }
+}
+
+.main-screen__img--3:hover {
   z-index: 20;
   transform: scale(1.2) translateX(34px) translateY(28px);
 }
 
-.main-screen__wrapper-images img:nth-child(4) {
+@media (max-width: 1439px) {
+  .main-screen__img--3:hover {
+    transform: scale(1.2) translateX(24px) translateY(20px);
+  }
+}
+
+.main-screen__img--4 {
   bottom: 0;
   left: 0;
 
@@ -541,9 +655,25 @@ img {
   height: 217px;
 }
 
-.main-screen__wrapper-images img:nth-child(4):hover {
+@media (max-width: 1439px) {
+  .main-screen__img--4 {
+    bottom: 0;
+    left: 0;
+
+    width: 319px;
+    height: 145px;
+  }
+}
+
+.main-screen__img--4:hover {
   z-index: 20;
   transform: scale(1.2) translateX(40px) translateY(-18px);
+}
+
+@media (max-width: 1439px) {
+  .main-screen__img--4:hover {
+    transform: scale(1.2) translateX(30px) translateY(-12px);
+  }
 }
 
 /*----------Гибкая настройка ваших дашбордов-------------*/
