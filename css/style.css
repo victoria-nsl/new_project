@@ -695,6 +695,7 @@ img {
   }
 }
 
+/*-----Группа дашбордов----*/
 .main-screen__wrapper-images {
   position: relative;
 
@@ -716,7 +717,7 @@ img {
     padding-top: 91.9%;
   }
 }
-/*---------------------------------*/
+/*------------------------*/
 .main-screen__wrapper-img--1 {
   position: absolute;
   top: 60px;
@@ -731,7 +732,7 @@ img {
 
 @media (max-width: 1439px) {
   .main-screen__wrapper-img--1 {
-    top: 40px;
+    top: 10%;
     right: 0;
 
     width: 33.2%;
@@ -760,7 +761,7 @@ img {
   height: 100%;
   object-fit: cover;
 }
-/*---------------------------*/
+/*-------------------------*/
 .main-screen__wrapper-img--2 {
   position: absolute;
   top: 239px;
@@ -776,7 +777,7 @@ img {
 
 @media (max-width: 1439px) {
   .main-screen__wrapper-img--2 {
-    top: 159px;
+    top: 39.8%;
     right: 0;
 
     width: 73%;
@@ -805,8 +806,7 @@ img {
   height: 100%;
   object-fit: cover;
 }
-/*--------------------------------*/
-
+/*----------------------------*/
 .main-screen__wrapper-img--3 {
   position: absolute;
   top: 0;
@@ -822,7 +822,7 @@ img {
 @media (max-width: 1439px) {
   .main-screen__wrapper-img--3 {
     top: 0;
-    left: 21px;
+    left: 4.8%;
 
     width: 58.35%;
     padding-top: 49.7%;
@@ -851,7 +851,7 @@ img {
   object-fit: cover;
 }
 
-/*---------------------------------*/
+/*---------------------------*/
 .main-screen__wrapper-img--4 {
   position: absolute;
   bottom: 0;
@@ -919,6 +919,12 @@ img {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
+}
+
+@media (max-width: 1439px) {
+  .dashboard-settings__description {
+    font-size: 17px;
+  }
 }
 
 .dashboard-settings__wrapper-video {
