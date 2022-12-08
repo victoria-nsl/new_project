@@ -960,7 +960,12 @@ img {
 }
 
 .data-visualization__title {
+  margin: 0;
   margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
 
   text-align: start;
 }
@@ -1016,13 +1021,6 @@ img {
     object-fit: cover;
   }
 }
-
-/* @media (max-width: 1439px) {
-  .data-visualization__wrapper-img img {
-    width: 491px;
-    height: 327px;
-  }
-} */
 
 /*----------Выгрузка отчета----------------------------*/
 .report-upload {
@@ -1083,7 +1081,12 @@ img {
 }
 
 .report-upload__title {
+  margin: 0;
   margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 .report-upload__description {
@@ -1118,7 +1121,12 @@ img {
 }
 
 .widget-set__title {
+  margin: 0;
   margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
 
   text-align: start;
 }
@@ -1312,7 +1320,12 @@ img {
 }
 
 .helpdesk__title {
+  margin: 0;
   margin-bottom: 24px;
+
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
 
   text-align: start;
 }
