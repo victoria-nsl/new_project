@@ -1,3 +1,8 @@
+const MAX_WIDTH_TABLET = 1439;
+
+const page = document.body;
+const menu = document.querySelector(".navigation");
+
 /*---------------Aккордeон--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
@@ -56,5 +61,76 @@ if (blockAccordionPlatformInstallation) {
 
       showContent(itemAccordionCurrent);
     });
+  });
+}
+
+/*------------ОТКРЫТИЕ/ЗАКРЫТИЕ МОБИЛЬНОГО МЕНЮ-------------*/
+const closeMenu = () => {
+  menu.classList.add("navigation--closed");
+  menu.classList.remove("navigation--opened");
+  page.classList.remove("page-no-scroll");
+};
+
+const openMenu = () => {
+  menu.classList.remove("navigation--closed");
+  menu.classList.add("navigation--opened");
+  page.classList.add("page-no-scroll");
+};
+
+const setFocusTab = (evt, firstElement, lastElement) => {
+  const isShiftPressed = evt.shiftKey;
+  const isTabPressed = evt.key === "Tab" || evt.keyCode === KEYCODE_TAB;
+  if (!isTabPressed) {
+    return;
+  }
+
+  if (
+    isShiftPressed &&
+    isTabPressed &&
+    document.activeElement === firstElement
+  ) {
+    lastElement.focus();
+    evt.preventDefault();
+  }
+
+  if (
+    !isShiftPressed &&
+    isTabPressed &&
+    document.activeElement === lastElement
+  ) {
+    evt.preventDefault();
+    firstElement.focus();
+  }
+};
+
+if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
+  const navigationToggle = menu.querySelector(".navigation__button");
+  const navigation = menu.querySelector(".navigation__site-list");
+  const elementsFocusable = navigation.querySelectorAll(
+    'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'
+  );
+
+  const numberElements = elementsFocusable.length;
+  const firstFocusElement = elementsFocusable[0];
+  const lastFocusElement = elementsFocusable[numberElements - 1];
+
+  navigationToggle.addEventListener("click", () => {
+    if (menu.classList.contains("navigation--closed")) {
+      openMenu();
+      return;
+    }
+    closeMenu();
+  });
+
+  elementsFocusable.forEach((element) =>
+    element.addEventListener("click", () => closeMenu())
+  );
+
+  firstFocusElement.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElement, lastFocusElement);
+  });
+
+  lastFocusElement.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElement, lastFocusElement);
   });
 }
