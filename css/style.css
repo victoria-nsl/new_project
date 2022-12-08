@@ -578,9 +578,10 @@ img {
 
 @media (max-width: 1439px) {
   .main-screen__inner {
-    grid-template-columns: 1fr 437px;
+    grid-template-columns: 48.1% 50.6%;
     grid-template-rows: 1fr min-content;
     column-gap: 11px;
+    row-gap: 62px;
   }
 }
 
@@ -590,13 +591,10 @@ img {
   grid-row-start: 1;
   grid-row-end: 2;
   padding-top: 86px;
-  padding-bottom: 77px;
 }
 
 @media (max-width: 1439px) {
   .main-screen__wrapper-description {
-    padding-bottom: 63px;
-    min-height: 465px;
     box-sizing: border-box;
   }
 }
@@ -704,7 +702,8 @@ img {
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-  height: 602px;
+
+  padding-top: 602px;
 }
 
 @media (max-width: 1439px) {
@@ -713,136 +712,188 @@ img {
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    height: 402px;
+
+    padding-top: 91.9%;
   }
 }
-
-.main-screen__img {
+/*---------------------------------*/
+.main-screen__wrapper-img--1 {
   position: absolute;
+  top: 60px;
+  right: 0;
 
-  display: block;
-
-  border-radius: 8px;
+  width: 218px;
+  padding-top: 159px;
 
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.main-screen__img--1 {
-  top: 60px;
-  right: 0;
-
-  width: 218px;
-  height: 159px;
-}
-
 @media (max-width: 1439px) {
-  .main-screen__img--1 {
+  .main-screen__wrapper-img--1 {
     top: 40px;
     right: 0;
 
-    width: 145px;
-    height: 106px;
+    width: 33.2%;
+    padding-top: 24.25%;
   }
 }
 
-.main-screen__img--1:hover {
+.main-screen__wrapper-img--1:hover {
   z-index: 20;
   transform: scale(1.2) translateX(-18px);
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--1:hover {
-    transform: scale(1.2) translateX(-12px);
+  .main-screen__wrapper-img--1:hover {
+    z-index: 1;
+    transform: none;
   }
 }
 
-.main-screen__img--2 {
+.main-screen__img--1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*---------------------------*/
+.main-screen__wrapper-img--2 {
+  position: absolute;
   top: 239px;
   right: 0;
   z-index: 10;
 
   width: 479px;
-  height: 212px;
+  padding-top: 212px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--2 {
+  .main-screen__wrapper-img--2 {
     top: 159px;
     right: 0;
 
-    width: 319px;
-    height: 141px;
+    width: 73%;
+    padding-top: 32.3%;
   }
 }
 
-.main-screen__img--2:hover {
+.main-screen__wrapper-img--2:hover {
   z-index: 20;
   transform: scale(1.2) translateX(-40px);
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--2:hover {
-    transform: scale(1.2) translateX(-28px);
+  .main-screen__wrapper-img--2:hover {
+    z-index: 1;
+    transform: none;
   }
 }
 
-.main-screen__img--3 {
+.main-screen__img--2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*--------------------------------*/
+
+.main-screen__wrapper-img--3 {
+  position: absolute;
   top: 0;
   left: 32px;
 
   width: 383px;
-  height: 326px;
+  padding-top: 326px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--3 {
+  .main-screen__wrapper-img--3 {
     top: 0;
     left: 21px;
 
-    width: 255px;
-    height: 217px;
+    width: 58.35%;
+    padding-top: 49.7%;
   }
 }
 
-.main-screen__img--3:hover {
+.main-screen__wrapper-img--3:hover {
   z-index: 20;
   transform: scale(1.2) translateX(34px) translateY(28px);
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--3:hover {
-    transform: scale(1.2) translateX(24px) translateY(20px);
+  .main-screen__wrapper-img--3:hover {
+    z-index: 1;
+    transform: none;
   }
 }
 
-.main-screen__img--4 {
+.main-screen__img--3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*---------------------------------*/
+.main-screen__wrapper-img--4 {
+  position: absolute;
   bottom: 0;
   left: 0;
 
   width: 479px;
-  height: 217px;
+  padding-top: 217px;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--4 {
+  .main-screen__wrapper-img--4 {
     bottom: 0;
     left: 0;
 
-    width: 319px;
-    height: 145px;
+    width: 73%;
+    padding-top: 33.2%;
   }
 }
 
-.main-screen__img--4:hover {
+.main-screen__wrapper-img--4:hover {
   z-index: 20;
   transform: scale(1.2) translateX(40px) translateY(-18px);
 }
 
 @media (max-width: 1439px) {
-  .main-screen__img--4:hover {
-    transform: scale(1.2) translateX(30px) translateY(-12px);
+  .main-screen__wrapper-img--4:hover {
+    z-index: 1;
+    transform: none;
   }
+}
+
+.main-screen__img--4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*----------Гибкая настройка ваших дашбордов-------------*/
@@ -896,10 +947,24 @@ img {
   width: 515px;
 }
 
+@media (max-width: 1439px) {
+  .data-visualization__wrapper-description {
+    width: 39%;
+  }
+}
+
 .data-visualization__title {
   margin-bottom: 24px;
 
   text-align: start;
+}
+
+@media (max-width: 1439px) {
+  .data-visualization__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .data-visualization__description {
@@ -909,14 +974,55 @@ img {
   line-height: 28px;
 }
 
+@media (max-width: 1439px) {
+  .data-visualization__description {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+
 .data-visualization__wrapper-img {
   width: 733px;
 }
+
+@media (max-width: 1439px) {
+  .data-visualization__wrapper-img {
+    position: relative;
+
+    width: 56.8%;
+    padding-top: 37.8%;
+  }
+}
+
+/* @media (max-width: 1439px) {
+  .data-visualization__wrapper-img {
+    width: 491px;
+  }
+} */
 
 .data-visualization__wrapper-img img {
   width: 733px;
   height: 488px;
 }
+
+@media (max-width: 1439px) {
+  .data-visualization__wrapper-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* @media (max-width: 1439px) {
+  .data-visualization__wrapper-img img {
+    width: 491px;
+    height: 327px;
+  }
+} */
 
 /*----------Выгрузка отчета----------------------------*/
 .report-upload {
