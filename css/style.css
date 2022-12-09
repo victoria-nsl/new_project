@@ -1582,6 +1582,12 @@ img {
   background-position: center bottom;
 }
 
+@media (max-width: 1439px) {
+  .our-customer {
+    background-image: url("../img/waves-our-customer-tablet.png");
+  }
+}
+
 .our-customer__title {
   margin-bottom: 70px;
 
@@ -1688,6 +1694,12 @@ img {
   margin-bottom: 200px;
 }
 
+@media (max-width: 1439px) {
+  .tariffs {
+    margin-bottom: 190px;
+  }
+}
+
 .tariffs__title {
   margin-bottom: 20px;
 
@@ -1734,6 +1746,12 @@ img {
   border-radius: 16px;
 }
 
+@media (max-width: 1439px) {
+  .tariffs__item {
+    padding: 40px 24px 5px 24px;
+  }
+}
+
 .tariffs__item--light {
   padding: 36px 24px 20px 24px;
 
@@ -1743,6 +1761,12 @@ img {
     linear-gradient(90deg, var(--green), var(--blue));
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
+}
+
+@media (max-width: 1439px) {
+  .tariffs__item--light {
+    padding: 36px 20px 5px 20px;
+  }
 }
 
 .tariffs__inner-item {
@@ -1829,6 +1853,16 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+}
+
+@media (max-width: 1439px) {
+  .tariffs__item-detailing {
+    margin-bottom: 24px;
+  }
+
+  .tariffs__item-detailing:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .tariffs__item-detailing::before {
