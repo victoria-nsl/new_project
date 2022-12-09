@@ -554,7 +554,7 @@ img {
 /*============Главный экран=============*/
 .main-screen {
   padding-bottom: 97px;
-  margin-bottom: 38px;
+  margin-bottom: 24px;
 
   background-image: url("../img/waves-main-screen.png");
   background-repeat: no-repeat;
@@ -696,24 +696,34 @@ img {
 }
 
 /*-----Группа дашбордов----*/
-.main-screen__wrapper-images {
-  position: relative;
+.main-screen__images {
+  padding-bottom: 14px;
 
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+
+@media (max-width: 1439px) {
+  .main-screen__images {
+    padding-bottom: 0;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.main-screen__wrapper-images {
+  position: relative;
 
   padding-top: 602px;
 }
 
 @media (max-width: 1439px) {
   .main-screen__wrapper-images {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
     padding-top: 91.9%;
   }
 }
