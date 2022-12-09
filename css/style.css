@@ -1319,7 +1319,7 @@ img {
 
 /*==========Почему еще стоит выбрать нас?========*/
 .why-us {
-  margin-bottom: 234px;
+  margin-bottom: 236px;
 }
 
 @media (max-width: 1439px) {
@@ -1574,7 +1574,7 @@ img {
 
 /*===========Для кого наша платформа============*/
 .our-customer {
-  margin-bottom: 200px;
+  margin-bottom: 202px;
 
   background-image: url("../img/waves-our-customer.png");
   background-repeat: no-repeat;
@@ -1583,7 +1583,7 @@ img {
 }
 
 .our-customer__title {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 
   text-align: center;
 }
@@ -1592,7 +1592,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  row-gap: 80px;
+  row-gap: 100px;
   width: 900px;
   margin: 0 auto;
   padding: 0;
@@ -1617,53 +1617,70 @@ img {
   text-align: center;
 }
 
+.our-customer__image-item {
+  position: relative;
+
+  width: 225px;
+  padding-top: 110px;
+
+  margin-bottom: 30px;
+}
+
 .our-customer__wrapper-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  order: 1;
-  padding: 20px;
-  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.our-customer__item:nth-child(1) img {
+.our-customer__wrapper-img--1 {
   width: 74px;
-  height: 106px;
+  padding-top: 106px;
 }
 
-.our-customer__item:nth-child(2) img {
+.our-customer__wrapper-img--2 {
   width: 110px;
-  height: 110px;
+  padding-top: 110px;
 }
 
-.our-customer__item:nth-child(3) img {
+.our-customer__wrapper-img--3 {
   width: 117px;
-  height: 105px;
+  padding-top: 105px;
 }
 
-.our-customer__item:nth-child(4) img {
+.our-customer__wrapper-img--4 {
   width: 113px;
-  height: 108px;
+  padding-top: 108px;
 }
 
-.our-customer__item:nth-child(5) img {
+.our-customer__wrapper-img--5 {
   width: 103px;
-  height: 105px;
+  padding-top: 105px;
 }
 
-.our-customer__item:nth-child(6) img {
+.our-customer__wrapper-img--6 {
   width: 127px;
-  height: 106px;
+  padding-top: 106px;
 }
 
-.our-customer__item:nth-child(7) img {
+.our-customer__wrapper-img--7 {
   width: 102px;
-  height: 109px;
+  padding-top: 109px;
 }
 
-.our-customer__item:nth-child(8) img {
+.our-customer__wrapper-img--8 {
   width: 105px;
-  height: 105px;
+  padding-top: 105px;
+}
+
+.our-customer__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*===============Тарифы============================*/
