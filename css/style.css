@@ -1019,50 +1019,86 @@ img {
   background-position: left bottom;
 }
 
+@media (max-width: 1439px) {
+  .report-upload {
+    background-size: 80.57% auto;
+  }
+}
+
 .report-upload__inner {
   display: flex;
   justify-content: space-between;
 }
 
-.report-upload__wrapper-img {
+.report-upload__wrapper-images {
   position: relative;
   width: 484px;
-  height: 488px;
-  padding-left: 38px;
+  padding-top: 488px;
+  margin-left: 38px;
+}
+
+@media (max-width: 1439px) {
+  .report-upload__wrapper-images {
+    position: relative;
+    width: 48.1%;
+    height: 488px;
+  }
 }
 
 .report-upload__wrapper-img img {
   position: absolute;
+  top: 0;
+  left: 0;
 
-  width: 90px;
-  height: 122px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.report-upload__wrapper-img img:nth-child(1) {
+.report-upload__wrapper-img--1 {
+  position: absolute;
   right: 0;
-  bottom: 58px;
+  bottom: 60px;
 
   width: 134px;
   height: 179px;
 }
 
-.report-upload__wrapper-img img:nth-child(2) {
-  left: 38px;
+.report-upload__wrapper-img--2 {
+  position: absolute;
+  left: 0;
   top: 120px;
+
+  width: 90px;
+  height: 122px;
 }
 
-.report-upload__wrapper-img img:nth-child(3) {
-  left: 162px;
-  bottom: 0;
+.report-upload__wrapper-img--3 {
+  position: absolute;
+  left: 124px;
+  bottom: 2px;
+
+  width: 90px;
+  height: 122px;
 }
 
-.report-upload__wrapper-img img:nth-child(4) {
-  left: 271px;
+.report-upload__wrapper-img--4 {
+  position: absolute;
+  left: 233px;
   top: 0;
+
+  width: 90px;
+  height: 122px;
 }
 
 .report-upload__wrapper-description {
   width: 672px;
+}
+
+@media (max-width: 1439px) {
+  .report-upload__wrapper-description {
+    width: 50.4%;
+  }
 }
 
 .report-upload__subtitle {
@@ -1074,6 +1110,13 @@ img {
   line-height: 48px;
 }
 
+@media (max-width: 1439px) {
+  .report-upload__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 .report-upload__description {
   margin: 0;
   margin-bottom: 17px;
@@ -1081,6 +1124,12 @@ img {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
+}
+
+@media (max-width: 1439px) {
+  .report-upload__description {
+    font-size: 17px;
+  }
 }
 
 .report-upload__description:last-child {
