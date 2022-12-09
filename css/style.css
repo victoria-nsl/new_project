@@ -551,10 +551,10 @@ img {
 
 /*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
 
-/*----------Главный экран----------------------*/
+/*============Главный экран=============*/
 .main-screen {
   padding-bottom: 97px;
-  margin-bottom: 23px;
+  margin-bottom: 38px;
 
   background-image: url("../img/waves-main-screen.png");
   background-repeat: no-repeat;
@@ -876,7 +876,7 @@ img {
   }
 }
 
-/*----------Гибкая настройка ваших дашбордов-------------*/
+/*==============Гибкая настройка ваших дашбордов========*/
 .dashboard-settings {
   margin-bottom: 200px;
 }
@@ -921,6 +921,11 @@ img {
   border-radius: 16px;
 }
 
+/*==========Преимущества============*/
+.benefits {
+  margin-bottom: 200px;
+}
+
 /*----------Визуализируйте данные без программирования--*/
 .data-visualization {
   display: flex;
@@ -939,7 +944,7 @@ img {
   }
 }
 
-.data-visualization__title {
+.data-visualization__subtitle {
   margin: 0;
   margin-bottom: 24px;
 
@@ -951,7 +956,7 @@ img {
 }
 
 @media (max-width: 1439px) {
-  .data-visualization__title {
+  .data-visualization__subtitle {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -1060,7 +1065,7 @@ img {
   width: 672px;
 }
 
-.report-upload__title {
+.report-upload__subtitle {
   margin: 0;
   margin-bottom: 24px;
 
@@ -1086,7 +1091,6 @@ img {
 .widget-set {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 200px;
 }
 
 @media (max-width: 1439px) {
@@ -1100,7 +1104,7 @@ img {
   padding-top: 32px;
 }
 
-.widget-set__title {
+.widget-set__subtitle {
   margin: 0;
   margin-bottom: 24px;
 
@@ -1160,9 +1164,9 @@ img {
   height: 160px;
 }
 
-/*----------Почему еще стоит выбрать нас?----------*/
+/*==========Почему еще стоит выбрать нас?========*/
 .why-us {
-  margin-bottom: 232px;
+  margin-bottom: 234px;
 }
 
 .why-us__title {
@@ -1171,18 +1175,20 @@ img {
   text-align: center;
 }
 
-.why-us__inner {
+/*----------Множество коннекторов--------*/
+.connectors {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 232px;
 }
 
 @media (max-width: 1439px) {
-  .why-us__inner {
+  .connectors {
     flex-direction: column;
   }
 }
 
-.why-us__list {
+.connectors__list {
   display: flex;
   flex-wrap: wrap;
   width: 730px;
@@ -1193,15 +1199,16 @@ img {
   padding: 0;
 
   list-style: none;
+  order: 1;
 }
 
 @media (max-width: 1439px) {
-  .why-us__list {
+  .connectors__list {
     order: 2;
   }
 }
 
-.why-us__item {
+.connectors__item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1209,7 +1216,7 @@ img {
   width: 160px;
 }
 
-.why-us__title-item {
+.connectors__title-item {
   order: 2;
   margin: 0;
 
@@ -1219,7 +1226,7 @@ img {
   line-height: 150%;
 }
 
-.why-us__wrapper-img {
+.connectors__wrapper-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1229,52 +1236,59 @@ img {
   margin-bottom: 10px;
 }
 
-.why-us__item:nth-child(1) img {
+.connectors__item:nth-child(1) img {
   width: 100px;
   height: 88px;
 }
 
-.why-us__item:nth-child(2) img {
+.connectors__item:nth-child(2) img {
   width: 100px;
   height: 93px;
 }
 
-.why-us__item:nth-child(3) img {
+.connectors__item:nth-child(3) img {
   width: 100px;
   height: 108px;
 }
 
-.why-us__item:nth-child(4) img {
+.connectors__item:nth-child(4) img {
   width: 100px;
   height: 98px;
 }
 
-.why-us__item:nth-child(5) img {
+.connectors__item:nth-child(5) img {
   width: 160px;
   height: 20px;
 }
 
-.why-us__item:nth-child(6) img {
+.connectors__item:nth-child(6) img {
   width: 92px;
   height: 102px;
 }
 
-.why-us__item:nth-child(7) img {
+.connectors__item:nth-child(7) img {
   width: 100px;
   height: 55px;
 }
 
-.why-us__item:nth-child(8) img {
+.connectors__item:nth-child(8) img {
   width: 70px;
   height: 70px;
 }
 
-.why-us__wrapper-description {
+.connectors__wrapper-description {
   width: 515px;
   padding-top: 32px;
+  order: 2;
 }
 
-.why-us__subtitle {
+@media (max-width: 1439px) {
+  .connectors__wrapper-description {
+    order: 1;
+  }
+}
+
+.connectors__subtitle {
   margin: 0;
   margin-bottom: 24px;
 
@@ -1283,7 +1297,7 @@ img {
   line-height: 48px;
 }
 
-.why-us__description {
+.connectors__description {
   margin: 0;
 
   font-weight: 400;
@@ -1295,8 +1309,6 @@ img {
 .helpdesk {
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 234px;
 }
 
 .helpdesk__title {
@@ -1332,7 +1344,7 @@ img {
   height: 478px;
 }
 
-/*----------Для кого наша платформа----------------*/
+/*===========Для кого наша платформа============*/
 .our-customer {
   margin-bottom: 200px;
 
@@ -1426,7 +1438,7 @@ img {
   height: 105px;
 }
 
-/*----------Тарифы-------------------------------*/
+/*===============Тарифы============================*/
 .tariffs {
   margin-bottom: 200px;
 }
@@ -1600,7 +1612,7 @@ img {
   color: var(--text-red);
 }
 
-/*----------Как установить платформу------------*/
+/*=============Как установить платформу============*/
 .platform-installation {
   margin-bottom: 200px;
 }
@@ -1637,7 +1649,7 @@ img {
   border-radius: 12px;
 }
 
-/*----------FAQ--------------------------------*/
+/*==============FAQ=============================*/
 .faq {
   margin-bottom: 200px;
 }
@@ -1681,7 +1693,7 @@ img {
   width: 624px;
 }
 
-/*----------Контакты--------------------------*/
+/*===============Контакты========================*/
 .contacts {
   margin-bottom: 100px;
 }
