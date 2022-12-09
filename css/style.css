@@ -1918,14 +1918,31 @@ img {
   width: 624px;
 }
 
+@media (max-width: 1439px) {
+  .platform-installation__wrapper-accordion {
+    width: 100%;
+
+    margin-bottom: 50px;
+  }
+}
+
 .platform-installation__wrapper-video {
   width: 624px;
   height: 336px;
 
-  background-color: var(--text-grey);
   background-image: url("../img/background-video.jpg");
   background-repeat: no-repeat;
   border-radius: 12px;
+}
+
+@media (max-width: 1439px) {
+  .platform-installation__wrapper-video {
+    width: 864px;
+    height: 465px;
+
+    background-size: cover;
+    border-radius: 15px;
+  }
 }
 
 /*==============FAQ=============================*/
@@ -1950,6 +1967,7 @@ img {
 @media (max-width: 1439px) {
   .faq__inner {
     flex-direction: column;
+    padding-left: 0;
   }
 }
 
@@ -1963,6 +1981,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .faq__wrapper-img {
+    display: none;
+  }
+}
+
 .faq__wrapper-img img {
   width: 586px;
   height: 301px;
@@ -1970,6 +1994,14 @@ img {
 
 .faq__wrapper-accordion {
   width: 624px;
+}
+
+@media (max-width: 1439px) {
+  .faq__wrapper-accordion {
+    width: 100%;
+
+    margin-bottom: 50px;
+  }
 }
 
 /*===============Контакты========================*/
