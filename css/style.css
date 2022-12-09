@@ -1021,7 +1021,8 @@ img {
 
 @media (max-width: 1439px) {
   .report-upload {
-    background-size: 80.57% auto;
+    background-image: url("../img/waves-report-upload-tablet.png");
+    background-size: 78.4% auto;
   }
 }
 
@@ -1030,18 +1031,34 @@ img {
   justify-content: space-between;
 }
 
+.report-upload__images {
+  width: 484px;
+  padding-left: 38px;
+}
+
+@media (max-width: 1439px) {
+  .report-upload__images {
+    display: flex;
+    /* width: 48.1%; */
+    width: 416px;
+    padding-left: 0;
+    padding-top: 34px;
+    padding-bottom: 86px;
+  }
+}
+
 .report-upload__wrapper-images {
   position: relative;
-  width: 484px;
+
+  width: 100%;
   padding-top: 488px;
-  margin-left: 38px;
 }
 
 @media (max-width: 1439px) {
   .report-upload__wrapper-images {
     position: relative;
-    width: 48.1%;
-    height: 488px;
+
+    padding-top: 100.96%;
   }
 }
 
@@ -1058,10 +1075,10 @@ img {
 .report-upload__wrapper-img--1 {
   position: absolute;
   right: 0;
-  bottom: 60px;
+  top: 251px;
 
   width: 134px;
-  height: 179px;
+  padding-top: 179px;
 }
 
 .report-upload__wrapper-img--2 {
@@ -1070,16 +1087,16 @@ img {
   top: 120px;
 
   width: 90px;
-  height: 122px;
+  padding-top: 122px;
 }
 
 .report-upload__wrapper-img--3 {
   position: absolute;
   left: 124px;
-  bottom: 2px;
+  bottom: 0;
 
   width: 90px;
-  height: 122px;
+  padding-top: 122px;
 }
 
 .report-upload__wrapper-img--4 {
@@ -1088,7 +1105,41 @@ img {
   top: 0;
 
   width: 90px;
-  height: 122px;
+  padding-top: 122px;
+}
+
+@media (max-width: 1439px) {
+  .report-upload__wrapper-img--1 {
+    right: 0;
+    top: 51.9%;
+
+    width: 27.6%;
+    padding-top: 37%;
+  }
+
+  .report-upload__wrapper-img--2 {
+    left: 0;
+    top: 24.75%;
+
+    width: 18.6%;
+    padding-top: 25.2%;
+  }
+
+  .report-upload__wrapper-img--3 {
+    left: 25.4%;
+    bottom: 0;
+
+    width: 18.6%;
+    padding-top: 25.2%;
+  }
+
+  .report-upload__wrapper-img--4 {
+    left: 48%;
+    top: 0;
+
+    width: 18.6%;
+    padding-top: 25.2%;
+  }
 }
 
 .report-upload__wrapper-description {
@@ -1097,7 +1148,11 @@ img {
 
 @media (max-width: 1439px) {
   .report-upload__wrapper-description {
-    width: 50.4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 416px; */
+    width: 48.1%;
   }
 }
 
