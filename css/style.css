@@ -1358,6 +1358,9 @@ img {
 @media (max-width: 1439px) {
   .connectors__list {
     order: 2;
+    column-gap: 74px;
+    width: 864px;
+    margin: 0 auto;
   }
 }
 
@@ -1379,54 +1382,69 @@ img {
   line-height: 150%;
 }
 
-.connectors__wrapper-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.connectors__image-item {
+  position: relative;
+
   width: 160px;
-  height: 160px;
-  order: 1;
+  padding-top: 160px;
   margin-bottom: 10px;
 }
 
-.connectors__item:nth-child(1) img {
-  width: 100px;
-  height: 88px;
+.connectors__wrapper-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.connectors__item:nth-child(2) img {
+.connectors__wrapper-img--1 {
   width: 100px;
-  height: 93px;
+  padding-top: 88px;
 }
 
-.connectors__item:nth-child(3) img {
+.connectors__wrapper-img--2 {
   width: 100px;
-  height: 108px;
+  padding-top: 93px;
 }
 
-.connectors__item:nth-child(4) img {
+.connectors__wrapper-img--3 {
   width: 100px;
-  height: 98px;
+  padding-top: 108px;
 }
 
-.connectors__item:nth-child(5) img {
+.connectors__wrapper-img--4 {
+  width: 100px;
+  padding-top: 98px;
+}
+
+.connectors__wrapper-img--5 {
   width: 160px;
-  height: 20px;
+  padding-top: 20px;
 }
 
-.connectors__item:nth-child(6) img {
+.connectors__wrapper-img--6 {
   width: 92px;
-  height: 102px;
+  padding-top: 102px;
 }
 
-.connectors__item:nth-child(7) img {
+.connectors__wrapper-img--7 {
   width: 100px;
-  height: 55px;
+  padding-top: 55px;
 }
 
-.connectors__item:nth-child(8) img {
+.connectors__wrapper-img--8 {
   width: 70px;
-  height: 70px;
+  padding-top: 70px;
+}
+
+.connectors__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .connectors__wrapper-description {
@@ -1438,6 +1456,9 @@ img {
 @media (max-width: 1439px) {
   .connectors__wrapper-description {
     order: 1;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-top: 0;
   }
 }
 
@@ -1450,12 +1471,25 @@ img {
   line-height: 48px;
 }
 
+@media (max-width: 1439px) {
+  .connectors__subtitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 .connectors__description {
   margin: 0;
 
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
+}
+
+@media (max-width: 1439px) {
+  .connectors__description {
+    font-size: 17px;
+  }
 }
 
 /*----------Helpdesk-------------------------------*/
