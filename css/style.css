@@ -2107,6 +2107,12 @@ img {
   width: 1050px;
 }
 
+@media (max-width: 1439px) {
+  .footer__wrapper-list {
+    width: 82%;
+  }
+}
+
 .footer__site-list {
   display: flex;
   align-items: center;
@@ -2154,11 +2160,6 @@ img {
 
 .footer__social-link:hover {
   opacity: 0.8;
-}
-
-.footer__social-link--instagram img {
-  width: 17px;
-  height: 17px;
 }
 
 .footer__social-link--twitter img {
