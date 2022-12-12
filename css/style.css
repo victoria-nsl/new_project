@@ -1422,10 +1422,24 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .why-us {
+    margin-bottom: 60px;
+  }
+}
+
 .why-us__title {
   margin-bottom: 50px;
 
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .why-us__title {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
 /*----------Множество коннекторов--------*/
@@ -1439,6 +1453,12 @@ img {
   .connectors {
     flex-direction: column;
     margin-bottom: 202px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .connectors {
+    margin-bottom: 100px;
   }
 }
 
@@ -1464,6 +1484,13 @@ img {
     margin: 0 auto;
   }
 }
+@media (max-width: 1023px) {
+  .connectors__list {
+    width: 100%;
+    column-gap: 9px;
+    row-gap: 13px;
+  }
+}
 
 .connectors__item {
   display: flex;
@@ -1471,6 +1498,44 @@ img {
   align-items: center;
   flex-direction: column;
   width: 160px;
+}
+
+@media (max-width: 1023px) {
+  .connectors__item {
+    width: 22.9%;
+  }
+
+  .connectors__item:nth-child(1) {
+    order: 1;
+  }
+
+  .connectors__item:nth-child(2) {
+    order: 2;
+  }
+
+  .connectors__item:nth-child(3) {
+    order: 5;
+  }
+
+  .connectors__item:nth-child(4) {
+    order: 6;
+  }
+
+  .connectors__item:nth-child(5) {
+    order: 3;
+  }
+
+  .connectors__item:nth-child(6) {
+    order: 4;
+  }
+
+  .connectors__item:nth-child(7) {
+    order: 7;
+  }
+
+  .connectors__item:nth-child(8) {
+    order: 8;
+  }
 }
 
 .connectors__title-item {
@@ -1483,12 +1548,27 @@ img {
   line-height: 150%;
 }
 
+@media (max-width: 1023px) {
+  .connectors__title-item {
+    font-size: calc(9px + 5 * ((100vw - 360px) / (1023 - 360)));
+    line-height: calc(11px + 10 * ((100vw - 360px) / (1023 -360)));
+  }
+}
+
 .connectors__image-item {
   position: relative;
 
   width: 160px;
   padding-top: 160px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1023px) {
+  .connectors__image-item {
+    width: 100%;
+    padding-top: 100%;
+    margin-bottom: 5px;
+  }
 }
 
 .connectors__wrapper-img {
@@ -1538,6 +1618,48 @@ img {
   padding-top: 70px;
 }
 
+@media (max-width: 1023px) {
+  .connectors__wrapper-img--1 {
+    width: 62.26%;
+    padding-top: 54.79%;
+  }
+
+  .connectors__wrapper-img--2 {
+    width: 62.27%;
+    padding-top: 57.91%;
+  }
+
+  .connectors__wrapper-img--3 {
+    width: 62.27%;
+    padding-top: 67.24%;
+  }
+
+  .connectors__wrapper-img--4 {
+    width: 62.26%;
+    padding-top: 60.7%;
+  }
+
+  .connectors__wrapper-img--5 {
+    width: 100%;
+    padding-top: 12.45%;
+  }
+
+  .connectors__wrapper-img--6 {
+    width: 56.28%;
+    padding-top: 59.1%;
+  }
+
+  .connectors__wrapper-img--7 {
+    width: 62.27%;
+    padding-top: 34.24%;
+  }
+
+  .connectors__wrapper-img--8 {
+    width: 43.59%;
+    padding-top: 43.59%;
+  }
+}
+
 .connectors__item img {
   position: absolute;
   top: 0;
@@ -1563,6 +1685,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .connectors__wrapper-description {
+    margin-bottom: 20px;
+  }
+}
+
 .connectors__subtitle {
   margin: 0;
   margin-bottom: 24px;
@@ -1576,6 +1704,15 @@ img {
   .connectors__subtitle {
     font-size: 24px;
     line-height: 29px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .connectors__subtitle {
+    margin-bottom: 16px;
+
+    font-size: 22px;
+    line-height: 27px;
   }
 }
 
@@ -1593,10 +1730,22 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .connectors__description {
+    font-size: 15px;
+  }
+}
+
 /*----------Helpdesk-------------------------------*/
 .helpdesk {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 1023px) {
+  .helpdesk {
+    flex-direction: column;
+  }
 }
 
 .helpdesk__wrapper-description {
@@ -1606,6 +1755,13 @@ img {
 @media (max-width: 1439px) {
   .helpdesk__wrapper-description {
     width: 39.46%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .helpdesk__wrapper-description {
+    width: 100%;
+    margin-bottom: 29px;
   }
 }
 
@@ -1627,6 +1783,15 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .helpdesk__title {
+    margin-bottom: 15px;
+
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+
 .helpdesk__description {
   margin: 0;
 
@@ -1642,6 +1807,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .helpdesk__description {
+    font-size: 15px;
+  }
+}
+
 .helpdesk__wrapper-img {
   position: relative;
 
@@ -1653,6 +1824,14 @@ img {
   .helpdesk__wrapper-img {
     width: 56.8%;
     padding-top: 42.36%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .helpdesk__wrapper-img {
+    width: 58.8%;
+    margin: 0 auto;
+    padding-top: 38.23%;
   }
 }
 
