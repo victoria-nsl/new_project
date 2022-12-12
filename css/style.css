@@ -1788,10 +1788,22 @@ img {
   margin-bottom: 200px;
 }
 
+@media (max-width: 1023px) {
+  .tariffs {
+    margin-bottom: 100px;
+  }
+}
+
 .tariffs__title {
   margin-bottom: 20px;
 
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .tariffs__title {
+    margin-bottom: 16px;
+  }
 }
 
 .tariffs__description {
@@ -1803,6 +1815,16 @@ img {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .tariffs__description {
+    width: 93%;
+    margin-bottom: 20px;
+
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 .tariffs__link {
@@ -1823,6 +1845,17 @@ img {
   list-style: none;
 }
 
+@media (max-width: 1023px) {
+  .tariffs__list {
+    grid-template-columns: minmax(340px, 416px);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 0;
+    row-gap: 20px;
+
+    justify-content: center;
+  }
+}
+
 .tariffs__item {
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -1837,6 +1870,12 @@ img {
 @media (max-width: 1439px) {
   .tariffs__item {
     padding: 40px 24px 5px 24px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tariffs__item {
+    padding-bottom: 14px;
   }
 }
 
@@ -1878,7 +1917,7 @@ img {
   margin: 0;
   margin-bottom: 20px;
 
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: var(--text-grey);
@@ -2056,8 +2095,7 @@ img {
     width: 100%;
     padding-top: 58%;
 
-    background-size: cover;
-    border-radius: 15px;
+    background-image: url("../img/background-video-mobile.jpg");
   }
 }
 
