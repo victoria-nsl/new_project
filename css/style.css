@@ -1241,6 +1241,8 @@ img {
 
 @media (max-width: 1439px) {
   .widget-set__subtitle {
+    margin-bottom: 22px;
+
     font-size: 24px;
     line-height: 29px;
   }
@@ -1344,7 +1346,7 @@ img {
 @media (max-width: 1439px) {
   .connectors {
     flex-direction: column;
-    margin-bottom: 200px;
+    margin-bottom: 202px;
   }
 }
 
@@ -1694,12 +1696,6 @@ img {
   margin-bottom: 200px;
 }
 
-@media (max-width: 1439px) {
-  .tariffs {
-    margin-bottom: 190px;
-  }
-}
-
 .tariffs__title {
   margin-bottom: 20px;
 
@@ -1857,7 +1853,7 @@ img {
 
 @media (max-width: 1439px) {
   .tariffs__item-detailing {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
   }
 
   .tariffs__item-detailing:last-child {
@@ -1950,6 +1946,12 @@ img {
   margin-bottom: 200px;
 }
 
+@media (max-width: 1439px) {
+  .faq {
+    margin-bottom: 196px;
+  }
+}
+
 .faq__title {
   margin-bottom: 50px;
 
@@ -2016,22 +2018,55 @@ img {
 }
 
 .contacts__inner {
-  padding: 23px 0;
+  position: relative;
+  width: 100%;
+}
 
-  background-color: var(--text-grey);
+@media (max-width: 1439px) {
+  .contacts__inner {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 80px;
+    box-sizing: border-box;
+  }
+}
+
+.contacts__wrapper-map {
+  width: 100%;
+  height: 500px;
+
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
+@media (max-width: 1439px) {
+  .contacts__wrapper-map {
+    background-image: url("../img/map-tablet.jpg");
+  }
+}
+
 .contacts__card {
+  position: absolute;
+  top: 23px;
+  left: calc((100% - 1280px) / 2);
+
   width: 672px;
   padding: 20px;
   box-sizing: border-box;
 
   background-color: var(--basic-grey);
   border-radius: 16px;
+}
+
+@media (max-width: 1439px) {
+  .contacts__card {
+    position: static;
+
+    width: 100%;
+    margin-bottom: 64px;
+  }
 }
 
 .contacts__list {
@@ -2082,6 +2117,13 @@ img {
   padding-bottom: 40px;
 
   background-color: var(--basic-grey);
+}
+
+@media (max-width: 1439px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
 }
 
 /*------------Вверхнее меню-----------------------*/
