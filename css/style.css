@@ -2194,6 +2194,13 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .footer {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+}
+
 /*------------Вверхнее меню-----------------------*/
 .footer__inner-top {
   display: flex;
@@ -2202,6 +2209,25 @@ img {
   padding-bottom: 15px;
 
   border-bottom: 1px solid var(--dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .footer__inner-top {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    border-bottom: none;
+  }
+}
+
+.footer__logo-link {
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .footer__logo-link {
+    margin-bottom: 16px;
+  }
 }
 
 .footer__logo-link img {
@@ -2223,6 +2249,16 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .footer__wrapper-list {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0 18px 0;
+
+    border-top: 1px solid var(--dark-grey);
+  }
+}
+
 .footer__site-list {
   display: flex;
   align-items: center;
@@ -2235,12 +2271,31 @@ img {
   list-style: none;
 }
 
+@media (max-width: 1023px) {
+  .footer__site-list {
+    order: 2;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer__site-item:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+
 .footer__site-link {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: var(--basic-white);
+}
+
+@media (max-width: 1023px) {
+  .footer__site-link {
+    line-height: 28px;
+  }
 }
 
 .footer__site-link[href]:hover {
@@ -2258,6 +2313,12 @@ img {
   padding: 0;
 
   list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .footer__social-list {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__social-item {
@@ -2290,6 +2351,13 @@ img {
   padding-top: 20px;
 }
 
+@media (max-width: 1023px) {
+  .footer__inner-bottom {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+
 .footer__copyright {
   margin: 0;
 
@@ -2299,6 +2367,12 @@ img {
   color: var(--dark-grey);
 }
 
+@media (max-width: 1023px) {
+  .footer__copyright {
+    order: 2;
+  }
+}
+
 .footer__links {
   display: flex;
   align-items: center;
@@ -2306,11 +2380,29 @@ img {
   width: 557px;
 }
 
+@media (max-width: 1023px) {
+  .footer__links {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+
 .footer__link {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: var(--dark-grey);
+}
+
+@media (max-width: 1023px) {
+  .footer__link:first-child {
+    order: 2;
+  }
+
+  .footer__link:last-child {
+    margin-bottom: 5px;
+  }
 }
 
 .footer__link:hover {
