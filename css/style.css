@@ -1984,10 +1984,22 @@ img {
   margin-bottom: 200px;
 }
 
+@media (max-width: 1023px) {
+  .platform-installation {
+    margin-bottom: 98px;
+  }
+}
+
 .platform-installation__title {
   margin-bottom: 47px;
 
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .platform-installation__title {
+    margin-bottom: 18px;
+  }
 }
 
 .platform-installation__inner {
@@ -2014,9 +2026,15 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .platform-installation__wrapper-accordion {
+    margin-bottom: 20px;
+  }
+}
+
 .platform-installation__wrapper-video {
   width: 624px;
-  height: 336px;
+  padding-top: 336px;
 
   background-image: url("../img/background-video.jpg");
   background-repeat: no-repeat;
@@ -2026,7 +2044,17 @@ img {
 @media (max-width: 1439px) {
   .platform-installation__wrapper-video {
     width: 864px;
-    height: 465px;
+    padding-top: 465px;
+
+    background-size: cover;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .platform-installation__wrapper-video {
+    width: 100%;
+    padding-top: 58%;
 
     background-size: cover;
     border-radius: 15px;
