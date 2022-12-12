@@ -1486,9 +1486,10 @@ img {
 }
 @media (max-width: 1023px) {
   .connectors__list {
-    width: 100%;
+    justify-content: space-between;
     column-gap: 9px;
     row-gap: 13px;
+    width: 100%;
   }
 }
 
@@ -1895,6 +1896,7 @@ img {
 
 @media (max-width: 1023px) {
   .our-customer__list {
+    justify-content: space-between;
     column-gap: 18px;
     width: 100vw;
     padding: 0 2.78vw;
