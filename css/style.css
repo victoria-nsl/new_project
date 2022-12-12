@@ -187,6 +187,16 @@ img {
   padding: 16px 40px;
 }
 
+@media (max-width: 1023px) {
+  .button-blue--contacts {
+    padding: 16px 84px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .button-navigation {
   display: inline-block;
   vertical-align: middle;
@@ -271,6 +281,14 @@ img {
   font-weight: 600;
   font-size: 40px;
   line-height: 48px;
+}
+
+@media (max-width: 1023px) {
+  .title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+  }
 }
 
 /*------------------АККОРДEОН-------------------*/
@@ -2079,10 +2097,22 @@ img {
   margin-bottom: 100px;
 }
 
+@media (max-width: 1023px) {
+  .contacts {
+    margin-bottom: 18px;
+  }
+}
+
 .contacts__title {
   margin-bottom: 50px;
 
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .contacts__title {
+    margin-bottom: 20px;
+  }
 }
 
 .contacts__inner {
@@ -2096,6 +2126,12 @@ img {
     margin: 0 auto;
     padding: 0 80px;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contacts__inner {
+    padding: 0 2.78vw;
   }
 }
 
@@ -2137,11 +2173,25 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .contacts__card {
+    margin-bottom: 20px;
+
+    text-align: center;
+  }
+}
+
 .contacts__list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .contacts__list {
+    text-align: start;
+  }
 }
 
 .contacts__item {
