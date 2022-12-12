@@ -332,6 +332,12 @@ img {
   transition: all 0.2s ease-in-out;
 }
 
+@media (max-width: 1023px) {
+  .accordion__button {
+    padding-right: 64px;
+  }
+}
+
 .accordion__button:hover {
   opacity: 0.8;
 }
@@ -2038,11 +2044,23 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .faq {
+    margin-bottom: 100px;
+  }
+}
+
 .faq__title {
   margin-bottom: 50px;
 
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 1023px) {
+  .faq__title {
+    margin-bottom: 20px;
+  }
 }
 
 .faq__inner {
@@ -2089,6 +2107,12 @@ img {
     width: 100%;
 
     margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .faq__wrapper-accordion {
+    margin-bottom: 0;
   }
 }
 
