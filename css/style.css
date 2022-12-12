@@ -286,8 +286,8 @@ img {
 @media (max-width: 1023px) {
   .title {
     font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: calc(22px + 18 * ((100vw - 360px) / (1023 - 360)));
+    line-height: calc(27px + 21 * ((100vw - 360px) / (1023 - 360)));
   }
 }
 
@@ -1682,10 +1682,24 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .our-customer {
+    margin-bottom: 102px;
+
+    background-image: none;
+  }
+}
+
 .our-customer__title {
   margin-bottom: 70px;
 
   text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .our-customer__title {
+    margin-bottom: 20px;
+  }
 }
 
 .our-customer__list {
@@ -1700,10 +1714,27 @@ img {
   list-style: none;
 }
 
+@media (max-width: 1023px) {
+  .our-customer__list {
+    column-gap: 18px;
+    width: 100vw;
+    padding: 0 2.78vw;
+    box-sizing: border-box;
+
+    row-gap: 15px;
+  }
+}
+
 .our-customer__item {
   display: flex;
   flex-direction: column;
   width: 225px;
+}
+
+@media (max-width: 1023px) {
+  .our-customer__item {
+    width: 20.88%;
+  }
 }
 
 .our-customer__title-item {
@@ -1717,6 +1748,13 @@ img {
   text-align: center;
 }
 
+@media (max-width: 1023px) {
+  .our-customer__title-item {
+    font-size: calc(9px + 15 * ((100vw - 360px) / (1023 - 360)));
+    line-height: calc(11px + 18 * ((100vw - 360px) / (1023 -360)));
+  }
+}
+
 .our-customer__image-item {
   position: relative;
 
@@ -1724,6 +1762,15 @@ img {
   padding-top: 110px;
 
   margin-bottom: 30px;
+}
+
+@media (max-width: 1023px) {
+  .our-customer__image-item {
+    width: 100%;
+    padding-top: 100%;
+
+    margin-bottom: 4px;
+  }
 }
 
 .our-customer__wrapper-img {
@@ -1773,6 +1820,48 @@ img {
   padding-top: 105px;
 }
 
+@media (max-width: 1023px) {
+  .our-customer__wrapper-img--1 {
+    width: 49.3%;
+    padding-top: 70.4%;
+  }
+
+  .our-customer__wrapper-img--2 {
+    width: 73.2%;
+    padding-top: 73.2%;
+  }
+
+  .our-customer__wrapper-img--3 {
+    width: 81.7%;
+    padding-top: 70%;
+  }
+
+  .our-customer__wrapper-img--4 {
+    width: 74.6%;
+    padding-top: 71.84%;
+  }
+
+  .our-customer__wrapper-img--5 {
+    width: 68.66%;
+    padding-top: 70%;
+  }
+
+  .our-customer__wrapper-img--6 {
+    width: 86.66%;
+    padding-top: 70.66%;
+  }
+
+  .our-customer__wrapper-img--7 {
+    width: 68%;
+    padding-top: 72.66%;
+  }
+
+  .our-customer__wrapper-img--8 {
+    width: 70%;
+    padding-top: 70%;
+  }
+}
+
 .our-customer__item img {
   position: absolute;
   top: 0;
@@ -1820,10 +1909,11 @@ img {
 @media (max-width: 1023px) {
   .tariffs__description {
     width: 93%;
+    max-width: 800px;
     margin-bottom: 20px;
 
-    font-size: 15px;
-    line-height: 18px;
+    font-size: calc(15px + 5 * ((100vw - 360px) / (1023 - 360)));
+    line-height: calc(18px + 6 * ((100vw - 360px) / (1023 - 360)));
   }
 }
 
