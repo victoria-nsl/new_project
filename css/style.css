@@ -148,12 +148,25 @@ img {
   );
 }
 
+@media (max-width: 1023px) {
+  .button-blue {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
 .button-blue:hover {
   opacity: 0.8;
 }
 
 .button-blue--nav {
   padding: 8px 24px;
+}
+
+@media (max-width: 1023px) {
+  .button-blue--nav {
+    padding: 8px 12px;
+  }
 }
 
 .button-blue--main-screen {
@@ -188,6 +201,15 @@ img {
   border: 1px solid var(--basic-white);
   border-radius: 8px;
   background-color: transparent;
+}
+
+@media (max-width: 1023px) {
+  .button-navigation {
+    padding: 8px 12px;
+
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 .button-navigation:hover {
@@ -346,6 +368,12 @@ img {
   margin-bottom: 52px;
 }
 
+@media (max-width: 1023px) {
+  .page-header {
+    margin-bottom: 50px;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -362,19 +390,41 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .navigation {
+    padding: 10px 0;
+  }
+}
+
+.navigation__wrapper-button-link {
+  margin-right: 311px;
+}
+
 @media (max-width: 1439px) {
   .navigation__wrapper-button-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 160px;
+    margin-right: 0;
   }
 
   .navigation--opened .navigation__wrapper-button-link {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 80px;
     z-index: 30;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navigation__wrapper-button-link {
+    width: 116px;
+  }
+
+  .navigation--opened .navigation__wrapper-button-link {
+    top: 10px;
+    left: 2.78vw;
   }
 }
 
@@ -458,18 +508,18 @@ img {
 
 .navigation__logo-link {
   display: block;
-  margin-right: 311px;
-}
-
-@media (max-width: 1439px) {
-  .navigation__logo-link {
-    margin-right: 0;
-  }
 }
 
 .navigation__logo-link img {
   width: 112px;
   height: 32px;
+}
+
+@media (max-width: 1023px) {
+  .navigation__logo-link img {
+    width: 68px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 1439px) {
@@ -490,6 +540,13 @@ img {
     padding-top: 67px;
 
     background-color: var(--basic-black);
+  }
+}
+
+@media (max-width: 1023px) {
+  .navigation--opened .navigation__wrapper-site-list {
+    width: 100%;
+    padding-top: 56px;
   }
 }
 
@@ -547,6 +604,17 @@ img {
   padding: 0;
 
   list-style: none;
+}
+
+@media (max-width: 1023px) {
+  .navigation__user-list {
+    width: 197px;
+  }
+
+  .navigation--opened .navigation__user-list {
+    position: relative;
+    z-index: 30;
+  }
 }
 
 /*-------------------ОСНОВНАЯ ЧАСТЬ----------------------------------------------*/
