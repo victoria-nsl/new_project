@@ -2796,6 +2796,7 @@ img {
 
   background-image: url("../img/background-video.png");
   background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 12px;
 }
 
@@ -2804,7 +2805,6 @@ img {
     width: 864px;
     padding-top: 465px;
 
-    background-size: cover;
     border-radius: 15px;
   }
 }
