@@ -741,7 +741,7 @@ img {
 
 @media (max-width: 1023px) {
   .main-screen__title {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
     font-weight: 700;
     font-size: calc(22px + 18 * ((100vw - 360px) / (1023 - 360)));
@@ -771,6 +771,8 @@ img {
 
 @media (max-width: 1023px) {
   .main-screen__description {
+    margin-bottom: 0;
+
     font-size: 15px;
   }
 }
@@ -886,22 +888,20 @@ img {
 
 /*-----Группа дашбордов----*/
 .main-screen__images {
-  padding-bottom: 14px;
-
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
+  padding-bottom: 14px;
 }
 
 @media (max-width: 1439px) {
   .main-screen__images {
-    padding-bottom: 0;
-
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding-bottom: 0;
   }
 }
 
@@ -911,7 +911,7 @@ img {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    padding-bottom: 114px;
+    padding-bottom: 27.64%;
   }
 }
 
@@ -924,6 +924,12 @@ img {
 @media (max-width: 1439px) {
   .main-screen__wrapper-images {
     padding-top: 91.9%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-screen__wrapper-images {
+    padding-top: 41.76%;
   }
 }
 
