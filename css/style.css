@@ -983,9 +983,21 @@ img {
   margin-bottom: 200px;
 }
 
+@media (max-width: 1023px) {
+  .dashboard-settings {
+    margin-bottom: 100px;
+  }
+}
+
 .dashboard-settings__wrapper-description {
   width: 100%;
   margin-bottom: 32px;
+}
+
+@media (max-width: 1023px) {
+  .dashboard-settings__wrapper-description {
+    margin-bottom: 20px;
+  }
 }
 
 .dashboard-settings__title {
@@ -1009,18 +1021,35 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .dashboard-settings__description {
+    font-size: 15px;
+    text-align: start;
+  }
+}
+
 .dashboard-settings__wrapper-video {
   width: 842px;
-  height: 488px;
+  padding-top: 488px;
   margin: 0 auto;
 
   background-color: transparent;
 
-  background-image: url("../img/background-video-dashboard-settings.jpg");
+  background-image: url("../img/background-video-dashboard-settings.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
   border-radius: 16px;
+}
+
+@media (max-width: 1023px) {
+  .dashboard-settings__wrapper-video {
+    width: 100%;
+    padding-top: 57.94%;
+    margin: 0 auto;
+
+    border-radius: 6px;
+  }
 }
 
 /*==========Преимущества============*/
@@ -2568,7 +2597,7 @@ img {
   width: 624px;
   padding-top: 336px;
 
-  background-image: url("../img/background-video.jpg");
+  background-image: url("../img/background-video.png");
   background-repeat: no-repeat;
   border-radius: 12px;
 }
@@ -2588,7 +2617,8 @@ img {
     width: 100%;
     padding-top: 58%;
 
-    background-image: url("../img/background-video-mobile.jpg");
+    background-image: url("../img/background-video-mobile.png");
+    border-radius: 6px;
   }
 }
 
