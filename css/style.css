@@ -674,7 +674,7 @@ img {
     margin-bottom: 100px;
 
     background-image: url("../img/waves-main-screen-mobile.png");
-    background-position: left center;
+    background-position: left 35%;
   }
 }
 
@@ -911,7 +911,7 @@ img {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
-    padding-bottom: 27.64%;
+    padding-bottom: 94px;
   }
 }
 
@@ -967,6 +967,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .main-screen__wrapper-img--1 {
+    display: none;
+  }
+}
+
 .main-screen__wrapper-img--1:hover {
   z-index: 20;
   transform: scale(1.2) translateX(-18px);
@@ -1002,6 +1008,12 @@ img {
     padding-top: 32.3%;
 
     cursor: default;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-screen__wrapper-img--2 {
+    display: none;
   }
 }
 
@@ -1042,6 +1054,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .main-screen__wrapper-img--3 {
+    display: none;
+  }
+}
+
 .main-screen__wrapper-img--3:hover {
   z-index: 20;
   transform: scale(1.2) translateX(34px) translateY(28px);
@@ -1079,6 +1097,12 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .main-screen__wrapper-img--4 {
+    display: none;
+  }
+}
+
 .main-screen__wrapper-img--4:hover {
   z-index: 20;
   transform: scale(1.2) translateX(40px) translateY(-18px);
@@ -1088,6 +1112,19 @@ img {
   .main-screen__wrapper-img--4:hover {
     z-index: 1;
     transform: none;
+  }
+}
+
+/*---------------------------*/
+.main-screen__wrapper-img--5 {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .main-screen__wrapper-img--5 {
+    display: block;
+
+    width: 100%;
   }
 }
 
