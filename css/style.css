@@ -2588,7 +2588,7 @@ img {
 
 @media (max-width: 1439px) {
   .tariffs__item {
-    padding: 40px 24px 5px 24px;
+    padding: 40px 24px 10px 24px;
   }
 }
 
@@ -2611,7 +2611,7 @@ img {
 
 @media (max-width: 1439px) {
   .tariffs__item--light {
-    padding: 36px 20px 5px 20px;
+    padding: 36px 20px 10px 20px;
   }
 }
 
