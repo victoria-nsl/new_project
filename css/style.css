@@ -3469,6 +3469,12 @@ img {
   line-height: 22px;
 }
 
+@media (max-width: 1023px) {
+  .modal__message {
+    text-align: center;
+  }
+}
+
 .modal__link {
   font-weight: 400;
   font-size: 18px;

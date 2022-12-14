@@ -4,7 +4,9 @@ const page = document.body;
 const menu = document.querySelector(".navigation");
 
 const buttonSignUp = document.querySelector(".navigation__button-sign-up");
-const overlayPopup = document.querySelector(".modal");
+const buttonLogIn = document.querySelector(".navigation__button-log-in");
+const overlayPopupSignUp = document.querySelector(".modal-sign-up");
+const overlayPopupLogIn = document.querySelector(".modal-log-in");
 
 /*---------------Aккордeон--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
@@ -139,42 +141,72 @@ if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
 }
 
 /*------------ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН-------------*/
-if (overlayPopup) {
-  const inputNameModal = overlayPopup.querySelector("#name");
 
-  const openPopup = () => {
-    overlayPopup.classList.add("modal__show");
-    page.classList.add("page-no-scroll");
-    inputNameModal.focus();
-  };
+const openPopup = (overlayPopup, inputModal) => {
+  overlayPopup.classList.add("modal__show");
+  page.classList.add("page-no-scroll");
+  inputModal.focus();
+};
 
-  const closePopup = () => {
-    if (overlayPopup.classList.contains("modal__show")) {
-      overlayPopup.classList.remove("modal__show");
-      page.classList.remove("page-no-scroll");
-    }
-  };
+const closePopup = (overlayPopup) => {
+  if (overlayPopup.classList.contains("modal__show")) {
+    overlayPopup.classList.remove("modal__show");
+    page.classList.remove("page-no-scroll");
+  }
+};
+
+/*----------Модальное окно с формой регистрации -----------*/
+if (overlayPopupSignUp) {
+  const inputNameModal = overlayPopupSignUp.querySelector("#name");
 
   const onDocumentEscKeydown = (evt) => {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      closePopup();
+      closePopup(overlayPopupSignUp);
       document.removeEventListener("keydown", onDocumentEscKeydown);
     }
   };
 
-  const onClickOverlayPopup = (evt) => {
+  const onClickOverlayPopupSignUp = (evt) => {
     if (evt.target.matches("section")) {
-      closePopup();
+      closePopup(overlayPopupSignUp);
     }
   };
 
   const onClickButtonSignUp = (evt) => {
     evt.preventDefault();
-    openPopup();
+    openPopup(overlayPopupSignUp, inputNameModal);
     document.addEventListener("keydown", onDocumentEscKeydown);
   };
 
-  overlayPopup.addEventListener("click", onClickOverlayPopup);
+  overlayPopupSignUp.addEventListener("click", onClickOverlayPopupSignUp);
   buttonSignUp.addEventListener("click", onClickButtonSignUp);
+}
+
+/*----------Модальное окно с формой логина -----------*/
+if (overlayPopupLogIn) {
+  const inputEmailModal = overlayPopupLogIn.querySelector("#email-log-in");
+
+  const onDocumentEscKeydown = (evt) => {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      closePopup(overlayPopupLogIn);
+      document.removeEventListener("keydown", onDocumentEscKeydown);
+    }
+  };
+
+  const onClickOverlayPopupLogIn = (evt) => {
+    if (evt.target.matches("section")) {
+      closePopup(overlayPopupLogIn);
+    }
+  };
+
+  const onClickButtonLogIn = (evt) => {
+    evt.preventDefault();
+    openPopup(overlayPopupLogIn, inputEmailModal);
+    document.addEventListener("keydown", onDocumentEscKeydown);
+  };
+
+  overlayPopupLogIn.addEventListener("click", onClickOverlayPopupLogIn);
+  buttonLogIn.addEventListener("click", onClickButtonLogIn);
 }

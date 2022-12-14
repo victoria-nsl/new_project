@@ -1005,9 +1005,10 @@
         </div>
       </div>
     </footer>
+
     <section class="modal modal-sign-up">
       <div class="modal__inner">
-        <h2 class="visually-hidden">Зарегистрироваться</h2>
+        <h2 class="visually-hidden">Форма регистрации</h2>
         <div class="modal__logo">
           <img
             src="img/logo.svg"
@@ -1016,7 +1017,13 @@
             alt="Логотип BI PRO"
           />
         </div>
-        <form class="modal__form" action="#" method="post" target="_blank">
+        <form
+          name="sign-up"
+          class="modal__form"
+          action="#"
+          method="post"
+          target="_blank"
+        >
           <div class="modal__item">
             <label for="name">Имя</label>
             <input
@@ -1040,20 +1047,20 @@
             />
           </div>
           <div class="modal__item">
-            <label for="email">Email</label>
+            <label for="email-sign-up">Email</label>
             <input
               type="email"
-              id="email"
+              id="email-sign-up"
               name="email"
               placeholder="Электронная почта"
               required
             />
           </div>
           <div class="modal__item">
-            <label for="password">Придумайте пароль</label>
+            <label for="password-sign-up">Придумайте пароль</label>
             <input
               type="password"
-              id="password"
+              id="password-sign-up"
               name="password"
               placeholder="Придумайте пароль"
               required
@@ -1073,11 +1080,11 @@
           <div class="modal__item modal__item--checkbox">
             <input
               class="modal__input-checkbox visually-hidden"
-              id="remember"
+              id="remember-sign-up"
               type="checkbox"
               name="remember"
             />
-            <label for="remember">Запомнить меня</label>
+            <label for="remember-sign-up">Запомнить меня</label>
           </div>
           <button
             class="modal__button button-blue button-blue--modal"
@@ -1087,6 +1094,67 @@
           </button>
           <p class="modal__message">
             <span>Уже есть аккаунт?</span> <a class="modal__link">Войти</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="modal modal-log-in">
+      <div class="modal__inner">
+        <h2 class="visually-hidden">Форма логина</h2>
+        <div class="modal__logo">
+          <img
+            src="img/logo.svg"
+            width="168"
+            height="48"
+            alt="Логотип BI PRO"
+          />
+        </div>
+        <form
+          name="log-in"
+          class="modal__form"
+          action="#"
+          method="post"
+          target="_blank"
+        >
+          <div class="modal__item">
+            <label for="email-log-in">Email</label>
+            <input
+              type="email"
+              id="email-log-in"
+              name="email"
+              placeholder="Электронная почта"
+              required
+            />
+          </div>
+          <div class="modal__item">
+            <label for="password-log-in">Пароль</label>
+            <input
+              type="password"
+              id="password-log-in"
+              name="password"
+              placeholder="Пароль"
+              required
+            />
+          </div>
+          <div class="modal__item modal__item--checkbox">
+            <input
+              class="modal__input-checkbox visually-hidden"
+              id="remember-log-in"
+              type="checkbox"
+              name="remember"
+            />
+            <label for="remember-log-in">Запомнить меня</label>
+          </div>
+          <button
+            class="modal__button button-blue button-blue--modal"
+            type="submit"
+          >
+            Войти
+          </button>
+          <p class="modal__message">
+            <span>Еще нет аккаунта?</span>
+            <a class="modal__link">Зарегистрироваться</a>
           </p>
         </form>
       </div>
