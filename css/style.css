@@ -2668,7 +2668,7 @@ img {
   background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: table;
+  display: block;
 }
 
 .tariffs__price-item span:last-child {
