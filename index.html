@@ -1008,7 +1008,7 @@
     <section class="modal modal-sign-up">
       <div class="modal__inner">
         <h2 class="visually-hidden">Зарегистрироваться</h2>
-        <div class="modal__logo-link">
+        <div class="modal__logo">
           <img
             src="img/logo.svg"
             width="168"
@@ -1071,12 +1071,23 @@
             />
           </div>
           <div class="modal__item modal__item--checkbox">
-            <input id="remember" type="checkbox" name="remember" />
+            <input
+              class="modal__input-checkbox visually-hidden"
+              id="remember"
+              type="checkbox"
+              name="remember"
+            />
             <label for="remember">Запомнить меня</label>
           </div>
-
-          <button class="modal__button" type="submit">Зарегистрировться</button>
-          <p><span>Уже есть аккаунт</span> <a class="modal__link">Войти</a></p>
+          <button
+            class="modal__button button-blue button-blue--modal"
+            type="submit"
+          >
+            Зарегистрироваться
+          </button>
+          <p class="modal__message">
+            <span>Уже есть аккаунт?</span> <a class="modal__link">Войти</a>
+          </p>
         </form>
       </div>
     </section>
