@@ -466,6 +466,8 @@ img {
 
 @media (max-width: 1023px) {
   .navigation {
+    max-width: 864px;
+    margin: 0 auto;
     padding: 10px 0;
   }
 }
@@ -498,7 +500,7 @@ img {
 
   .navigation--opened .navigation__wrapper-button-link {
     top: 10px;
-    left: 2.78vw;
+    left: max(2.78vw, calc((100vw - 864px) / 2));
   }
 }
 
@@ -751,6 +753,7 @@ img {
     grid-template-columns: 100%;
     grid-template-rows: auto 1fr min-content;
     row-gap: 20px;
+    max-width: calc(864px + 5.56vw);
   }
 }
 
@@ -1202,6 +1205,8 @@ img {
 
 @media (max-width: 1023px) {
   .dashboard-settings__wrapper-description {
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -1251,7 +1256,8 @@ img {
 @media (max-width: 1023px) {
   .dashboard-settings__wrapper-video {
     width: 100%;
-    padding-top: 57.94%;
+    max-width: 842px;
+    padding-top: min(57.94%, 488px);
     margin: 0 auto;
 
     border-radius: 6px;
@@ -1287,9 +1293,11 @@ img {
 
 @media (max-width: 1023px) {
   .data-visualization {
-    grid-template-columns: minmax(340px, 700px);
+    grid-template-columns: minmax(340px, 491px);
     grid-template-rows: auto auto;
     row-gap: 20px;
+    max-width: calc(864px + 5.56vw);
+    margin: 0 auto;
     margin-bottom: 100px;
   }
 }
@@ -1440,6 +1448,8 @@ img {
   .report-upload__images {
     display: flex;
     width: 100%;
+    max-width: 864px;
+    margin: 0 auto;
     padding-top: 20px;
     padding-bottom: 30px;
   }
@@ -1550,7 +1560,8 @@ img {
     top: 44.83%;
 
     width: 21.18%;
-    padding-top: 28.23%;
+    max-width: 115px;
+    padding-top: min(28.23%, 153px);
   }
 
   .report-upload__wrapper-img--2 {
@@ -1558,7 +1569,8 @@ img {
     top: 0;
 
     width: 14.12%;
-    padding-top: 19.41%;
+    max-width: 77px;
+    padding-top: min(19.41%, 105px);
   }
 
   .report-upload__wrapper-img--3 {
@@ -1566,7 +1578,8 @@ img {
     bottom: 40.8%;
 
     width: 14.12%;
-    padding-top: 19.41%;
+    max-width: 77px;
+    padding-top: min(19.41%, 105px);
   }
 
   .report-upload__wrapper-img--4 {
@@ -1574,7 +1587,8 @@ img {
     top: 51.12%;
 
     width: 14.12%;
-    padding-top: 19.41%;
+    max-width: 77px;
+    padding-top: min(19.41%, 105px);
   }
 }
 
@@ -1595,6 +1609,8 @@ img {
 @media (max-width: 1023px) {
   .report-upload__wrapper-description {
     width: 100%;
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -1677,6 +1693,8 @@ img {
 
 @media (max-width: 1023px) {
   .widget-set__wrapper-description {
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -1754,7 +1772,8 @@ img {
 
 @media (max-width: 1023px) {
   .widget-set__list {
-    column-gap: 9px;
+    max-width: 864px;
+    column-gap: 2.65%;
     row-gap: 23px;
     justify-content: space-between;
     width: 100%;
@@ -1772,6 +1791,7 @@ img {
 @media (max-width: 1023px) {
   .widget-set__item {
     width: 22.94%;
+    max-width: 160px;
   }
 
   .widget-set__item:nth-child(1) {
@@ -1943,7 +1963,8 @@ img {
 @media (max-width: 1023px) {
   .connectors__list {
     justify-content: space-between;
-    column-gap: 9px;
+    max-width: 864px;
+    column-gap: 2.65%;
     row-gap: 13px;
     width: 100%;
   }
@@ -1960,6 +1981,7 @@ img {
 @media (max-width: 1023px) {
   .connectors__item {
     width: 22.9%;
+    max-width: 160px;
   }
 
   .connectors__item:nth-child(1) {
@@ -2144,6 +2166,8 @@ img {
 
 @media (max-width: 1023px) {
   .connectors__wrapper-description {
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -2219,6 +2243,8 @@ img {
 @media (max-width: 1023px) {
   .helpdesk__wrapper-description {
     width: 100%;
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 29px;
   }
 }
@@ -2356,6 +2382,7 @@ img {
     justify-content: space-between;
     column-gap: 18px;
     width: 100vw;
+    max-width: 900px;
     padding: 0 2.78vw;
     box-sizing: border-box;
 
@@ -2799,6 +2826,7 @@ img {
 
 @media (max-width: 1023px) {
   .platform-installation__wrapper-accordion {
+    max-width: 864px;
     margin-bottom: 20px;
   }
 }
@@ -2825,7 +2853,8 @@ img {
 @media (max-width: 1023px) {
   .platform-installation__wrapper-video {
     width: 100%;
-    padding-top: 58%;
+    max-width: 864px;
+    padding-top: min(58%, 501px);
 
     background-image: url("../img/background-video-mobile.png");
     border-radius: 6px;
@@ -2911,6 +2940,7 @@ img {
 
 @media (max-width: 1023px) {
   .faq__wrapper-accordion {
+    max-width: 864px;
     margin-bottom: 0;
   }
 }
@@ -2974,6 +3004,13 @@ img {
   }
 }
 
+@media (max-width: 1023px) {
+  .contacts__wrapper-map {
+    max-width: 864px;
+    margin: 0 auto;
+  }
+}
+
 .contacts__card {
   position: absolute;
   top: 23px;
@@ -2998,6 +3035,8 @@ img {
 
 @media (max-width: 1023px) {
   .contacts__card {
+    max-width: 864px;
+    margin: 0 auto;
     margin-bottom: 20px;
 
     text-align: center;
