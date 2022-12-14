@@ -2660,7 +2660,7 @@ img {
 }
 
 .tariffs__price-item--light span:first-child {
-  background: linear-gradient(
+  background: -webkit-linear-gradient(
     99.35deg,
     var(--green) 22.49%,
     var(--blue) 86.94%
