@@ -3284,3 +3284,40 @@ img {
 .footer__link:active {
   opacity: 0.6;
 }
+
+/*=========МОДАЛЬНЫЕ ОКНА============*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+
+  display: none;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__inner {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 150;
+  /* display: none; */
+
+  width: 480px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+
+  background-color: var(--basic-black);
+}
+
+.modal__show {
+  display: block;
+}

@@ -3,6 +3,9 @@ const MAX_WIDTH_TABLET = 1439;
 const page = document.body;
 const menu = document.querySelector(".navigation");
 
+const buttonSignUp = document.querySelector(".navigation__button-sign-up");
+const overlayPopup = document.querySelector(".modal");
+
 /*---------------Aккордeон--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
@@ -133,4 +136,45 @@ if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
   lastFocusElement.addEventListener("keydown", (evt) => {
     setFocusTab(evt, firstFocusElement, lastFocusElement);
   });
+}
+
+/*------------ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН-------------*/
+if (overlayPopup) {
+  const inputNameModal = overlayPopup.querySelector("#name");
+
+  const openPopup = () => {
+    overlayPopup.classList.add("modal__show");
+    page.classList.add("page-no-scroll");
+    inputNameModal.focus();
+  };
+
+  const closePopup = () => {
+    if (overlayPopup.classList.contains("modal__show")) {
+      overlayPopup.classList.remove("modal__show");
+      page.classList.remove("page-no-scroll");
+    }
+  };
+
+  const onDocumentEscKeydown = (evt) => {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      closePopup();
+      document.removeEventListener("keydown", onDocumentEscKeydown);
+    }
+  };
+
+  const onClickOverlayPopup = (evt) => {
+    if (evt.target.matches("section")) {
+      closePopup();
+    }
+  };
+
+  const onClickButtonSignUp = (evt) => {
+    evt.preventDefault();
+    openPopup();
+    document.addEventListener("keydown", onDocumentEscKeydown);
+  };
+
+  overlayPopup.addEventListener("click", onClickOverlayPopup);
+  buttonSignUp.addEventListener("click", onClickButtonSignUp);
 }

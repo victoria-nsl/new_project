@@ -77,10 +77,16 @@
 
         <ul class="navigation__user-list">
           <li class="navigation__user-item">
-            <a class="button-blue button-blue--nav" href="#">Регистрация</a>
+            <a
+              class="button-blue button-blue--nav navigation__button-sign-up"
+              href="#"
+              >Регистрация</a
+            >
           </li>
           <li class="navigation__user-item">
-            <a class="button-navigation" href="#">Войти</a>
+            <a class="button-navigation navigation__button-log-in" href="#"
+              >Войти</a
+            >
           </li>
         </ul>
       </nav>
@@ -999,6 +1005,81 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal-sign-up">
+      <div class="modal__inner">
+        <h2 class="visually-hidden">Зарегистрироваться</h2>
+        <div class="modal__logo-link">
+          <img
+            src="img/logo.svg"
+            width="168"
+            height="48"
+            alt="Логотип BI PRO"
+          />
+        </div>
+        <form class="modal__form" action="#" method="post" target="_blank">
+          <div class="modal__item">
+            <label for="name">Имя</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Имя"
+              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              required
+            />
+          </div>
+          <div class="modal__item">
+            <label for="surname">Фамилия</label>
+            <input
+              id="surname"
+              type="text"
+              name="surname"
+              placeholder="Фамилия"
+              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              required
+            />
+          </div>
+          <div class="modal__item">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Электронная почта"
+              required
+            />
+          </div>
+          <div class="modal__item">
+            <label for="password">Придумайте пароль</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Придумайте пароль"
+              required
+            />
+          </div>
+          <div class="modal__item">
+            <label for="password-repeat">Повторите пароль</label>
+            <input
+              type="password"
+              id="password-repeat"
+              name="password-repeat"
+              placeholder="Повторите пароль"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="modal__item modal__item--checkbox">
+            <input id="remember" type="checkbox" name="remember" />
+            <label for="remember">Запомнить меня</label>
+          </div>
+
+          <button class="modal__button" type="submit">Зарегистрировться</button>
+          <p><span>Уже есть аккаунт</span> <a class="modal__link">Войти</a></p>
+        </form>
+      </div>
+    </section>
     <script src="js/script.js"></script>
   </body>
 </html>
