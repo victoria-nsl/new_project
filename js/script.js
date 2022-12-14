@@ -112,7 +112,7 @@ if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
   const navigationToggle = menu.querySelector(".navigation__button");
   const navigation = menu.querySelector(".navigation__site-list");
   const elementsFocusable = navigation.querySelectorAll(
-    'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'
+    "a[href]:not([disabled])"
   );
 
   const numberElements = elementsFocusable.length;
@@ -151,6 +151,14 @@ const openPopup = (overlayPopup, inputModal) => {
 const closePopup = (overlayPopup) => {
   if (overlayPopup.classList.contains("modal__show")) {
     overlayPopup.classList.remove("modal__show");
+    if (
+      menu &&
+      menu.classList.contains("navigation--opened") &&
+      page.clientWidth < MAX_WIDTH_TABLET
+    ) {
+      page.classList.add("page-no-scroll");
+      return;
+    }
     page.classList.remove("page-no-scroll");
   }
 };
@@ -158,6 +166,23 @@ const closePopup = (overlayPopup) => {
 /*----------Модальное окно с формой регистрации -----------*/
 if (overlayPopupSignUp) {
   const inputNameModal = overlayPopupSignUp.querySelector("#name");
+
+  const elementsFocusableSignUp = overlayPopupSignUp.querySelectorAll(
+    'a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="email"]:not([disabled]), input[type="password"]:not([disabled]), input[type="checkbox"]:not([disabled])'
+  );
+
+  const numberElementsSignUp = elementsFocusableSignUp.length;
+  const firstFocusElementeSignUp = elementsFocusableSignUp[0];
+  const lastFocusElementeSignUp =
+    elementsFocusableSignUp[numberElementsSignUp - 1];
+
+  firstFocusElementeSignUp.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
+  });
+
+  lastFocusElementeSignUp.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
+  });
 
   const onDocumentEscKeydown = (evt) => {
     if (evt.keyCode === 27) {
@@ -186,6 +211,23 @@ if (overlayPopupSignUp) {
 /*----------Модальное окно с формой логина -----------*/
 if (overlayPopupLogIn) {
   const inputEmailModal = overlayPopupLogIn.querySelector("#email-log-in");
+
+  const elementsFocusableLogIn = overlayPopupLogIn.querySelectorAll(
+    'a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="email"]:not([disabled]), input[type="password"]:not([disabled]), input[type="checkbox"]:not([disabled])'
+  );
+
+  const numberElementsLogIn = elementsFocusableLogIn.length;
+  const firstFocusElementeLogIn = elementsFocusableLogIn[0];
+  const lastFocusElementeLogIn =
+    elementsFocusableLogIn[numberElementsLogIn - 1];
+
+  firstFocusElementeLogIn.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeLogIn, lastFocusElementeLogIn);
+  });
+
+  lastFocusElementeLogIn.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeLogIn, lastFocusElementeLogIn);
+  });
 
   const onDocumentEscKeydown = (evt) => {
     if (evt.keyCode === 27) {

@@ -1880,7 +1880,7 @@ img {
 
 @media (max-width: 1023px) {
   .why-us {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 }
 
@@ -2321,7 +2321,7 @@ img {
 
 @media (max-width: 1023px) {
   .our-customer {
-    margin-bottom: 102px;
+    margin-bottom: 100px;
 
     background-image: none;
   }
@@ -3436,8 +3436,12 @@ img {
   background-color: var(--basic-grey);
 }
 
-.modal__input-checkbox + label:hover::before {
+.modal__input-checkbox:hover + label::before {
   border-color: var(--light-grey);
+}
+
+.modal__input-checkbox:focus + label::before {
+  outline: 2px solid var(--basic-white);
 }
 
 .modal__input-checkbox:checked + label::before {
