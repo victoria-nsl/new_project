@@ -142,6 +142,7 @@ img {
   color: var(--basic-black);
 
   border-radius: 8px;
+  border: none;
   background: linear-gradient(
     99.35deg,
     var(--green) 22.49%,
@@ -3332,6 +3333,16 @@ img {
   border-radius: 16px;
 }
 
+@media (max-width: 1023px) {
+  .modal__inner {
+    top: 100px;
+
+    width: 340px;
+    margin: 0 auto;
+    padding: 40px 10px;
+  }
+}
+
 .modal__show {
   display: block;
 }
@@ -3380,6 +3391,10 @@ img {
 
 .modal__item input:hover {
   border-color: var(--light-grey);
+}
+
+.modal__input-invalid {
+  border-color: var(--text-red);
 }
 
 .modal__item--checkbox label {
