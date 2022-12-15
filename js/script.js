@@ -7,12 +7,13 @@ const buttonSignUp = document.querySelector(".navigation__button-sign-up");
 const buttonLogIn = document.querySelector(".navigation__button-log-in");
 const overlayPopupSignUp = document.querySelector(".modal-sign-up");
 const overlayPopupLogIn = document.querySelector(".modal-log-in");
+const formsModal = document.querySelectorAll(".modal form");
 
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
 );
-
 const blockAccordionFaq = document.querySelector(".accordion__list--faq");
+
 const checkboxsShowPassword = document.querySelectorAll(
   ".modal__input-password-checkbox"
 );
@@ -272,21 +273,21 @@ if (checkboxsShowPassword) {
 }
 
 /*================Валидация формы============*/
-const formsModal = document.querySelectorAll(".modal form");
+if (formsModal) {
+  formsModal.forEach((form) => {
+    const inputsForm = form.querySelectorAll("input");
+    const buttonForm = form.querySelector(".modal__button");
 
-formsModal.forEach((form) => {
-  const inputsForm = form.querySelectorAll("input");
-  const buttonForm = form.querySelector(".modal__button");
+    buttonForm.addEventListener("click", (evt) => {
+      evt.preventDefault();
 
-  buttonForm.addEventListener("click", (evt) => {
-    evt.preventDefault();
-
-    inputsForm.forEach((input) => {
-      if (!input.validity.valid) {
-        input.classList.add("modal__invalid-input");
-      } else {
-        input.classList.remove("modal__invalid-input");
-      }
+      inputsForm.forEach((input) => {
+        if (!input.validity.valid) {
+          input.classList.add("modal__invalid-input");
+        } else {
+          input.classList.remove("modal__invalid-input");
+        }
+      });
     });
   });
-});
+}
