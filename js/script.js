@@ -8,13 +8,16 @@ const buttonLogIn = document.querySelector(".navigation__button-log-in");
 const overlayPopupSignUp = document.querySelector(".modal-sign-up");
 const overlayPopupLogIn = document.querySelector(".modal-log-in");
 
-/*---------------Aккордeон--------------*/
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
 );
 
 const blockAccordionFaq = document.querySelector(".accordion__list--faq");
+const checkboxsShowPassword = document.querySelectorAll(
+  ".modal__input-password-checkbox"
+);
 
+/*---------------Aккордeон--------------*/
 const hideContent = (item) => {
   item.classList.remove("accordion__item--active");
   item.classList.add("accordion__item--closed");
@@ -252,3 +255,25 @@ if (overlayPopupLogIn) {
   overlayPopupLogIn.addEventListener("click", onClickOverlayPopupLogIn);
   buttonLogIn.addEventListener("click", onClickButtonLogIn);
 }
+
+/*=========Кнопка показать/скрыть пароль=============*/
+const showOrHidePassword = (checkbox) => {
+  const input = checkbox.closest(".modal__wrapper-password").children[1];
+  if (input.type === "password") {
+    input.type === "text";
+    return;
+  }
+  input.type === "password";
+};
+
+checkboxsShowPassword.forEach((inputCheckbox) => {
+  inputCheckbox.addEventListener("change", () => {
+    const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
+      .children[1];
+    if (inputCheckbox.checked) {
+      inputPassword.type = "text";
+      return;
+    }
+    inputPassword.type = "password";
+  });
+});
