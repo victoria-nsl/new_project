@@ -257,15 +257,6 @@ if (overlayPopupLogIn) {
 }
 
 /*=========Кнопка показать/скрыть пароль=============*/
-const showOrHidePassword = (checkbox) => {
-  const input = checkbox.closest(".modal__wrapper-password").children[1];
-  if (input.type === "password") {
-    input.type === "text";
-    return;
-  }
-  input.type === "password";
-};
-
 checkboxsShowPassword.forEach((inputCheckbox) => {
   inputCheckbox.addEventListener("change", () => {
     const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
