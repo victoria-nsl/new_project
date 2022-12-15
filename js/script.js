@@ -9,6 +9,8 @@ const overlayPopupSignUp = document.querySelector(".modal-sign-up");
 const overlayPopupLogIn = document.querySelector(".modal-log-in");
 const formsModal = document.querySelectorAll(".modal form");
 
+const buttonСookies = document.querySelector(".main-screen__button");
+
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
 );
@@ -291,3 +293,10 @@ if (formsModal) {
     });
   });
 }
+
+/*-------------------Кнопка ОК куки------------*/
+buttonСookies.addEventListener("click", () => {
+  buttonСookies
+    .closest(".main-screen__wrapper-info")
+    .classList.add("main-screen__wrapper-info--hide");
+});

@@ -1102,6 +1102,10 @@ img {
   z-index: 20;
 }
 
+.main-screen__wrapper-info--hide {
+  display: none;
+}
+
 .main-screen__info {
   display: flex;
   justify-content: space-between;
