@@ -87,7 +87,7 @@ const openMenu = () => {
 
 const setFocusTab = (evt, firstElement, lastElement) => {
   const isShiftPressed = evt.shiftKey;
-  const isTabPressed = evt.key === "Tab" || evt.keyCode === KEYCODE_TAB;
+  const isTabPressed = evt.key === "Tab";
   if (!isTabPressed) {
     return;
   }
