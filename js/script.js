@@ -257,14 +257,33 @@ if (overlayPopupLogIn) {
 }
 
 /*=========Кнопка показать/скрыть пароль=============*/
-checkboxsShowPassword.forEach((inputCheckbox) => {
-  inputCheckbox.addEventListener("change", () => {
-    const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
-      .children[1];
-    if (inputCheckbox.checked) {
-      inputPassword.type = "text";
-      return;
+if (checkboxsShowPassword) {
+  checkboxsShowPassword.forEach((inputCheckbox) => {
+    inputCheckbox.addEventListener("change", () => {
+      const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
+        .children[1];
+      if (inputCheckbox.checked) {
+        inputPassword.type = "text";
+        return;
+      }
+      inputPassword.type = "password";
+    });
+  });
+}
+
+/*================Валидация формы============*/
+const formSignUp = document.querySelector(".modal-sign-up  form");
+const inputsFormSignUp = formSignUp.querySelectorAll("input");
+const buttonFormSignUp = formSignUp.querySelector(".modal__button");
+
+buttonFormSignUp.addEventListener("click", (evt) => {
+  evt.preventDefault();
+
+  inputsFormSignUp.forEach((input) => {
+    if (!input.validity.valid) {
+      input.classList.add("modal__invalid-input");
+    } else {
+      input.classList.remove("modal__invalid-input");
     }
-    inputPassword.type = "password";
   });
 });

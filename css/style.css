@@ -3438,8 +3438,8 @@ img {
   border-color: var(--light-grey);
 }
 
-.modal__input-invalid {
-  border-color: var(--text-red);
+.modal__invalid-input {
+  border: 1px solid var(--text-red) !important;
 }
 
 .modal__item--checkbox label {
@@ -3533,7 +3533,11 @@ img {
   }
 }
 
-.modal__link {
+.modal__change {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -3541,13 +3545,16 @@ img {
   text-decoration: underline;
 
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
-.modal__link:hover {
+.modal__change:hover {
   color: var(--light-green);
 }
 
-.modal__link:active {
+.modal__change:active {
   color: var(--light-green);
 
   opacity: 0.8;
