@@ -1057,25 +1057,56 @@
             />
           </div>
           <div class="modal__item">
-            <label for="password-sign-up">Придумайте пароль</label>
-            <input
-              type="password"
-              id="password-sign-up"
-              name="password"
-              placeholder="Придумайте пароль"
-              required
-            />
+            <div class="modal__wrapper-password">
+              <label for="password-sign-up">Придумайте пароль</label>
+              <input
+                type="password"
+                id="password-sign-up"
+                name="password"
+                placeholder="Придумайте пароль"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-sign-up"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-sign-up"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
+            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item">
-            <label for="password-repeat">Повторите пароль</label>
-            <input
-              type="password"
-              id="password-repeat"
-              name="password-repeat"
-              placeholder="Повторите пароль"
-              autocomplete="off"
-              required
-            />
+            <div class="modal__wrapper-password">
+              <label for="password-repeat">Повторите пароль</label>
+              <input
+                type="password"
+                id="password-repeat"
+                name="password-repeat"
+                placeholder="Повторите пароль"
+                autocomplete="off"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-repeat-sign-up"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-repeat-sign-up"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
           </div>
           <div class="modal__item modal__item--checkbox">
             <input
@@ -1129,14 +1160,30 @@
             />
           </div>
           <div class="modal__item">
-            <label for="password-log-in">Пароль</label>
-            <input
-              type="password"
-              id="password-log-in"
-              name="password"
-              placeholder="Пароль"
-              required
-            />
+            <div class="modal__wrapper-password">
+              <label for="password-log-in">Пароль</label>
+              <input
+                type="password"
+                id="password-log-in"
+                name="password"
+                placeholder="Пароль"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-log-in"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-log-in"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
+            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item modal__item--checkbox">
             <input

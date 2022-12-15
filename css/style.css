@@ -227,6 +227,12 @@ img {
   cursor: pointer;
 }
 
+@media (max-width: 1023px) {
+  .button-blue--modal {
+    padding: 8px;
+  }
+}
+
 .button-navigation {
   display: inline-block;
   vertical-align: middle;
@@ -3374,7 +3380,7 @@ img {
 
 @media (max-width: 1023px) {
   .modal__inner {
-    top: 100px;
+    top: 70px;
 
     width: 340px;
     margin: 0 auto;
@@ -3504,6 +3510,12 @@ img {
   margin-bottom: 22px;
 }
 
+@media (max-width: 1023px) {
+  .modal__button {
+    margin-bottom: 24px;
+  }
+}
+
 .modal__message {
   margin: 0;
 
@@ -3514,7 +3526,10 @@ img {
 
 @media (max-width: 1023px) {
   .modal__message {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
   }
 }
 
@@ -3536,4 +3551,61 @@ img {
   color: var(--light-green);
 
   opacity: 0.8;
+}
+
+.modal__error-password {
+  display: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: var(--text-red);
+}
+
+.modal__error-password--show {
+  display: block;
+}
+
+.modal__wrapper-password {
+  position: relative;
+}
+
+.modal__wrapper-icon-password {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+
+  width: 20px;
+  height: 20px;
+}
+
+.modal__wrapper-icon-password label {
+  padding-left: 20px;
+}
+
+.modal__wrapper-icon-password input + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/back-icon-not-show.png");
+  background-repeat: no-repeat;
+}
+
+.modal__wrapper-icon-password input:checked + label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  background-image: url("../img/back-icon-show.png");
+  background-repeat: no-repeat;
 }
