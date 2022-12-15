@@ -272,18 +272,21 @@ if (checkboxsShowPassword) {
 }
 
 /*================Валидация формы============*/
-const formSignUp = document.querySelector(".modal-sign-up  form");
-const inputsFormSignUp = formSignUp.querySelectorAll("input");
-const buttonFormSignUp = formSignUp.querySelector(".modal__button");
+const formsModal = document.querySelectorAll(".modal form");
 
-buttonFormSignUp.addEventListener("click", (evt) => {
-  evt.preventDefault();
+formsModal.forEach((form) => {
+  const inputsForm = form.querySelectorAll("input");
+  const buttonForm = form.querySelector(".modal__button");
 
-  inputsFormSignUp.forEach((input) => {
-    if (!input.validity.valid) {
-      input.classList.add("modal__invalid-input");
-    } else {
-      input.classList.remove("modal__invalid-input");
-    }
+  buttonForm.addEventListener("click", (evt) => {
+    evt.preventDefault();
+
+    inputsForm.forEach((input) => {
+      if (!input.validity.valid) {
+        input.classList.add("modal__invalid-input");
+      } else {
+        input.classList.remove("modal__invalid-input");
+      }
+    });
   });
 });
