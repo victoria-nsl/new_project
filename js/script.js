@@ -167,7 +167,7 @@ const closePopup = (overlayPopup) => {
 };
 
 /*----------Модальное окно с формой регистрации -----------*/
-if (overlayPopupSignUp) {
+if (overlayPopupSignUp && overlayPopupLogIn) {
   const inputNameModal = overlayPopupSignUp.querySelector("#name");
 
   const elementsFocusableSignUp = overlayPopupSignUp.querySelectorAll(
@@ -212,7 +212,7 @@ if (overlayPopupSignUp) {
 }
 
 /*----------Модальное окно с формой логина -----------*/
-if (overlayPopupLogIn) {
+if (overlayPopupLogIn && overlayPopupSignUp) {
   const inputEmailModal = overlayPopupLogIn.querySelector("#email-log-in");
 
   const elementsFocusableLogIn = overlayPopupLogIn.querySelectorAll(
