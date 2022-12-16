@@ -3047,6 +3047,14 @@ img {
   display: block;
 }
 
+.footer__logo-link:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-link:active {
+  opacity: 0.6;
+}
+
 @media (max-width: 1023px) {
   .footer__logo-link {
     margin-bottom: 16px;
