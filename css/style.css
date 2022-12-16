@@ -3475,7 +3475,7 @@ img {
   border-color: var(--light-grey);
 }
 
-.modal__input-checkbox:focus + label::before {
+.modal__input-checkbox:focus-visible + label::before {
   outline: 2px solid var(--basic-white);
 }
 
@@ -3598,4 +3598,12 @@ img {
 
   background-image: url("../img/back-icon-show.png");
   background-repeat: no-repeat;
+}
+
+.modal__wrapper-icon-password input:focus-visible + label::before {
+  outline: 1px solid var(--basic-white);
+}
+
+.modal__wrapper-icon-password input:checked:focus-visible + label::before {
+  outline: 1px solid var(--basic-white);
 }
