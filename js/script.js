@@ -116,36 +116,42 @@ const setFocusTab = (evt, firstElement, lastElement) => {
   }
 };
 
+const getElementsFocusable = (block) => {
+  const elementsFocusableSignUp = block.querySelectorAll(
+    'a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="email"]:not([disabled]), input[type="password"]:not([disabled]), input[type="checkbox"]:not([disabled])'
+  );
+
+  const numberElementsSignUp = elementsFocusableSignUp.length;
+  const firstFocusElementeSignUp = elementsFocusableSignUp[0];
+  const lastFocusElementeSignUp =
+    elementsFocusableSignUp[numberElementsSignUp - 1];
+
+  firstFocusElementeSignUp.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
+  });
+
+  lastFocusElementeSignUp.addEventListener("keydown", (evt) => {
+    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
+  });
+};
+
 if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
   const navigationToggle = menu.querySelector(".navigation__button");
   const navigation = menu.querySelector(".navigation__site-list");
-  const elementsFocusable = navigation.querySelectorAll(
-    "a[href]:not([disabled])"
-  );
-
-  const numberElements = elementsFocusable.length;
-  const firstFocusElement = elementsFocusable[0];
-  const lastFocusElement = elementsFocusable[numberElements - 1];
+  const navigationItems = menu.querySelectorAll(".navigation__site-item");
 
   navigationToggle.addEventListener("click", () => {
     if (menu.classList.contains("navigation--closed")) {
       openMenu();
+      getElementsFocusable(navigation);
       return;
     }
     closeMenu();
   });
 
-  elementsFocusable.forEach((element) =>
-    element.addEventListener("click", () => closeMenu())
+  navigationItems.forEach((item) =>
+    item.addEventListener("click", () => closeMenu())
   );
-
-  firstFocusElement.addEventListener("keydown", (evt) => {
-    setFocusTab(evt, firstFocusElement, lastFocusElement);
-  });
-
-  lastFocusElement.addEventListener("keydown", (evt) => {
-    setFocusTab(evt, firstFocusElement, lastFocusElement);
-  });
 }
 
 /*===============ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН==============*/
@@ -169,25 +175,6 @@ const closePopup = (overlayPopup) => {
     }
     page.classList.remove("page-no-scroll");
   }
-};
-
-const getElementsFocusable = (overlayPopup) => {
-  const elementsFocusableSignUp = overlayPopup.querySelectorAll(
-    'a[href]:not([disabled]), button:not([disabled]), input[type="text"]:not([disabled]), input[type="email"]:not([disabled]), input[type="password"]:not([disabled]), input[type="checkbox"]:not([disabled])'
-  );
-
-  const numberElementsSignUp = elementsFocusableSignUp.length;
-  const firstFocusElementeSignUp = elementsFocusableSignUp[0];
-  const lastFocusElementeSignUp =
-    elementsFocusableSignUp[numberElementsSignUp - 1];
-
-  firstFocusElementeSignUp.addEventListener("keydown", (evt) => {
-    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
-  });
-
-  lastFocusElementeSignUp.addEventListener("keydown", (evt) => {
-    setFocusTab(evt, firstFocusElementeSignUp, lastFocusElementeSignUp);
-  });
 };
 
 if (overlayPopupSignUp && overlayPopupLogIn) {
