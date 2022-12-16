@@ -7,14 +7,20 @@ const buttonSignUp = document.querySelector(".navigation__button-sign-up");
 const buttonLogIn = document.querySelector(".navigation__button-log-in");
 const overlayPopupSignUp = document.querySelector(".modal-sign-up");
 const overlayPopupLogIn = document.querySelector(".modal-log-in");
+const formsModal = document.querySelectorAll(".modal form");
 
-/*---------------Aккордeон--------------*/
+const buttonСookies = document.querySelector(".main-screen__button");
+
 const blockAccordionPlatformInstallation = document.querySelector(
   ".accordion__list--platform-installation"
 );
-
 const blockAccordionFaq = document.querySelector(".accordion__list--faq");
 
+const checkboxsShowPassword = document.querySelectorAll(
+  ".modal__input-password-checkbox"
+);
+
+/*---------------Aккордeон--------------*/
 const hideContent = (item) => {
   item.classList.remove("accordion__item--active");
   item.classList.add("accordion__item--closed");
@@ -84,7 +90,7 @@ const openMenu = () => {
 
 const setFocusTab = (evt, firstElement, lastElement) => {
   const isShiftPressed = evt.shiftKey;
-  const isTabPressed = evt.key === "Tab" || evt.keyCode === KEYCODE_TAB;
+  const isTabPressed = evt.key === "Tab";
   if (!isTabPressed) {
     return;
   }
@@ -164,7 +170,7 @@ const closePopup = (overlayPopup) => {
 };
 
 /*----------Модальное окно с формой регистрации -----------*/
-if (overlayPopupSignUp) {
+if (overlayPopupSignUp && overlayPopupLogIn) {
   const inputNameModal = overlayPopupSignUp.querySelector("#name");
 
   const elementsFocusableSignUp = overlayPopupSignUp.querySelectorAll(
@@ -209,7 +215,7 @@ if (overlayPopupSignUp) {
 }
 
 /*----------Модальное окно с формой логина -----------*/
-if (overlayPopupLogIn) {
+if (overlayPopupLogIn && overlayPopupSignUp) {
   const inputEmailModal = overlayPopupLogIn.querySelector("#email-log-in");
 
   const elementsFocusableLogIn = overlayPopupLogIn.querySelectorAll(
@@ -252,3 +258,56 @@ if (overlayPopupLogIn) {
   overlayPopupLogIn.addEventListener("click", onClickOverlayPopupLogIn);
   buttonLogIn.addEventListener("click", onClickButtonLogIn);
 }
+
+/*=========Кнопка показать/скрыть пароль=============*/
+if (checkboxsShowPassword) {
+  checkboxsShowPassword.forEach((inputCheckbox) => {
+    inputCheckbox.addEventListener("change", () => {
+      const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
+        .children[1];
+      if (inputCheckbox.checked) {
+        inputPassword.type = "text";
+        return;
+      }
+      inputPassword.type = "password";
+    });
+  });
+}
+
+/*================Валидация формы============*/
+if (formsModal) {
+  formsModal.forEach((form) => {
+    const inputsForm = form.querySelectorAll("input");
+    const buttonForm = form.querySelector(".modal__button");
+
+    buttonForm.addEventListener("click", (evt) => {
+      evt.preventDefault();
+
+      inputsForm.forEach((input) => {
+        if (!input.validity.valid) {
+          input.classList.add("modal__invalid-input");
+        } else {
+          input.classList.remove("modal__invalid-input");
+        }
+      });
+    });
+  });
+}
+
+/*-------------------КУКИ------------*/
+const checkCookies = () => {
+  let cookieDate = localStorage.getItem("cookieDate");
+  let cookieNotification = document.querySelector(".footer__wrapper-cookie");
+  let cookieButton = cookieNotification.querySelector(".footer__button-cookie");
+
+  if (!cookieDate || +cookieDate + 31536000000 < Date.now()) {
+    cookieNotification.classList.add("footer__wrapper-cookie--show");
+  }
+
+  cookieButton.addEventListener("click", function () {
+    localStorage.setItem("cookieDate", Date.now());
+    cookieNotification.classList.remove("footer__wrapper-cookie--show");
+  });
+};
+
+checkCookies();

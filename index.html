@@ -46,7 +46,7 @@
             aria-label="Открыть/закрыть меню"
           ></button>
 
-          <a class="navigation__logo-link">
+          <a class="navigation__logo-link" href="/">
             <img
               src="img/logo.svg"
               width="112"
@@ -107,22 +107,6 @@
               <a class="button-blue button-blue--main-screen" href="#"
                 >Попробовать бесплатно</a
               >
-            </div>
-          </div>
-          <div class="main-screen__wrapper-info">
-            <div class="main-screen__info">
-              <span
-                >Мы используем куки, чтобы пользоваться сайтом было
-                удобнее.&nbsp;
-                <a class="main-screen__link" href="#">Подробнее</a></span
-              >
-
-              <button
-                type="button"
-                class="button-main-screen main-screen__button"
-              >
-                OК
-              </button>
             </div>
           </div>
           <div class="main-screen__images">
@@ -1004,6 +988,17 @@
           </div>
         </div>
       </div>
+      <div class="footer__wrapper-cookie">
+        <div class="footer__cookie">
+          <span
+            >Мы используем куки, чтобы пользоваться сайтом было удобнее.&nbsp;
+            <a class="footer__link-cookie" href="#">Подробнее</a></span
+          >
+          <button type="button" class="button-cookie footer__button-cookie">
+            OК
+          </button>
+        </div>
+      </div>
     </footer>
 
     <section class="modal modal-sign-up">
@@ -1057,34 +1052,56 @@
             />
           </div>
           <div class="modal__item">
-            <label for="password-sign-up">Придумайте пароль</label>
-            <input
-              type="password"
-              id="password-sign-up"
-              name="password"
-              placeholder="Придумайте пароль"
-              required
-            />
+            <div class="modal__wrapper-password">
+              <label for="password-sign-up">Придумайте пароль</label>
+              <input
+                type="password"
+                id="password-sign-up"
+                name="password"
+                placeholder="Придумайте пароль"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-sign-up"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-sign-up"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
+            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item">
-            <label for="password-repeat">Повторите пароль</label>
-            <input
-              type="password"
-              id="password-repeat"
-              name="password-repeat"
-              placeholder="Повторите пароль"
-              autocomplete="off"
-              required
-            />
-          </div>
-          <div class="modal__item modal__item--checkbox">
-            <input
-              class="modal__input-checkbox visually-hidden"
-              id="remember-sign-up"
-              type="checkbox"
-              name="remember"
-            />
-            <label for="remember-sign-up">Запомнить меня</label>
+            <div class="modal__wrapper-password">
+              <label for="password-repeat">Повторите пароль</label>
+              <input
+                type="password"
+                id="password-repeat"
+                name="password-repeat"
+                placeholder="Повторите пароль"
+                autocomplete="off"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-repeat-sign-up"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-repeat-sign-up"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
           </div>
           <button
             class="modal__button button-blue button-blue--modal"
@@ -1092,10 +1109,10 @@
           >
             Зарегистрироваться
           </button>
-          <p class="modal__message">
+          <div class="modal__message">
             <span>Уже есть аккаунт?</span>
             <a class="modal__link" href="#">Войти</a>
-          </p>
+          </div>
         </form>
       </div>
     </section>
@@ -1129,14 +1146,30 @@
             />
           </div>
           <div class="modal__item">
-            <label for="password-log-in">Пароль</label>
-            <input
-              type="password"
-              id="password-log-in"
-              name="password"
-              placeholder="Пароль"
-              required
-            />
+            <div class="modal__wrapper-password">
+              <label for="password-log-in">Пароль</label>
+              <input
+                type="password"
+                id="password-log-in"
+                name="password"
+                placeholder="Пароль"
+                minlength="8"
+                required
+              />
+              <div class="modal__wrapper-icon-password">
+                <input
+                  class="modal__input-password-checkbox visually-hidden"
+                  id="show-password-log-in"
+                  type="checkbox"
+                  name="show-password"
+                />
+                <label
+                  for="show-password-log-in"
+                  aria-label="Показать/скрыть пароль"
+                ></label>
+              </div>
+            </div>
+            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item modal__item--checkbox">
             <input
@@ -1153,10 +1186,10 @@
           >
             Войти
           </button>
-          <p class="modal__message">
+          <div class="modal__message">
             <span>Еще нет аккаунта?</span>
             <a class="modal__link" href="#">Зарегистрироваться</a>
-          </p>
+          </div>
         </form>
       </div>
     </section>
