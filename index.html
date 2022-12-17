@@ -988,6 +988,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer__wrapper-cookie">
         <div class="footer__cookie">
           <span
@@ -1026,7 +1027,7 @@
               type="text"
               name="name"
               placeholder="Имя"
-              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
               required
             />
           </div>
@@ -1037,7 +1038,7 @@
               type="text"
               name="surname"
               placeholder="Фамилия"
-              pattern="^[A-Za-zА-Яа-яЁё\s]+$"
+              pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
               required
             />
           </div>
@@ -1075,7 +1076,6 @@
                 ></label>
               </div>
             </div>
-            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item">
             <div class="modal__wrapper-password">
@@ -1169,7 +1169,6 @@
                 ></label>
               </div>
             </div>
-            <div class="modal__error-password">Минимум 8 символов</div>
           </div>
           <div class="modal__item modal__item--checkbox">
             <input

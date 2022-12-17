@@ -1,4 +1,11 @@
 const MAX_WIDTH_TABLET = 1439;
+const MIN_LENGTH_PASSWORD = 8;
+
+const MESSAGE_EMPTY = "Поле обязательно для заполнения";
+const MESSAGE_NAME = "Ввести данные можно на русском языке  и латиницей";
+const MESSAGE_EMAIL = "Email некорректный";
+const MESSAGE_PASSWORD = "Минимум 8 символов";
+const MESSAGE_PASSWORD_REPEAT = "Пароли должны совпадать";
 
 const page = document.body;
 const menu = document.querySelector(".navigation");
@@ -267,19 +274,55 @@ if (checkboxsShowPassword) {
 }
 
 /*================ВАЛИДАЦИЯ ФОРМЫ============*/
+const hideError = (field, error) => {
+  field.addEventListener("input", () => {
+    field.classList.remove("modal__invalid-input");
+    error.remove();
+  });
+};
+
+const showError = (field, message) => {
+  if (
+    field.nextElementSibling &&
+    field.nextElementSibling.textContent === message
+  ) {
+    return;
+  }
+
+  field.classList.add("modal__invalid-input");
+
+  const error = document.createElement("div");
+  field.after(error);
+  error.classList.add("modal__error");
+  error.textContent = message;
+
+  hideError(field, error);
+};
+
 if (formsModal) {
   formsModal.forEach((form) => {
     const inputsForm = form.querySelectorAll("input");
-    const buttonForm = form.querySelector(".modal__button");
 
-    buttonForm.addEventListener("click", (evt) => {
-      evt.preventDefault();
-
-      inputsForm.forEach((input) => {
-        if (!input.validity.valid) {
-          input.classList.add("modal__invalid-input");
-        } else {
-          input.classList.remove("modal__invalid-input");
+    inputsForm.forEach((input) => {
+      input.addEventListener("blur", () => {
+        if (input.value.length === 0) {
+          showError(input, MESSAGE_EMPTY);
+        } else if (
+          (input.name === "name" || input.name === "surname") &&
+          !input.validity.valid
+        ) {
+          showError(input, MESSAGE_NAME);
+        } else if (input.type === "email" && !input.validity.valid) {
+          showError(input, MESSAGE_EMAIL);
+        } else if (
+          input.name === "password" &&
+          input.value.length < MIN_LENGTH_PASSWORD
+        ) {
+          showError(input, MESSAGE_PASSWORD);
+        } else if (input.name === "password-repeat") {
+          const inputPassword = form.querySelector('input[name = "password"]');
+          if (inputPassword.value !== input.value)
+            showError(input, MESSAGE_PASSWORD_REPEAT);
         }
       });
     });
