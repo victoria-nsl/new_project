@@ -1507,7 +1507,6 @@ img {
   .report-upload__wrapper-description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     /* width: 416px; */
     width: 48.1%;
   }
@@ -1550,7 +1549,6 @@ img {
 
 .report-upload__description {
   margin: 0;
-  margin-bottom: 16px;
 
   font-weight: 400;
   font-size: 20px;
@@ -1567,10 +1565,6 @@ img {
   .report-upload__description {
     font-size: 15px;
   }
-}
-
-.report-upload__description:last-child {
-  margin-bottom: 0;
 }
 
 /*----------Большой набор встроенных виджетов----------*/
@@ -3066,46 +3060,33 @@ img {
   height: 32px;
 }
 
-.footer__wrapper-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 20px;
-  width: 1050px;
-}
-
-@media (max-width: 1439px) {
-  .footer__wrapper-list {
-    width: 82%;
-  }
-}
-
-@media (max-width: 1023px) {
-  .footer__wrapper-list {
-    flex-direction: column;
-    width: 100%;
-    padding: 20px 0 18px 0;
-
-    border-top: 1px solid var(--dark-grey);
-  }
-}
-
 .footer__site-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 10px;
+  width: 1050px;
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+@media (max-width: 1439px) {
+  .footer__site-list {
+    width: 82%;
+  }
+}
+
 @media (max-width: 1023px) {
   .footer__site-list {
     order: 2;
     flex-direction: column;
+    width: 100%;
+    padding: 20px 0 18px 0;
+
+    border-top: 1px solid var(--dark-grey);
   }
 }
 
