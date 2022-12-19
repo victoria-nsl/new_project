@@ -3257,6 +3257,7 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
+  right: 0;
   z-index: 20;
 
   display: none;
@@ -3268,24 +3269,16 @@ img {
 
 .footer__cookie {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 620px;
+  column-gap: 16px;
+  width: 100%;
   padding: 8px 8px 8px 16px;
   box-sizing: border-box;
 
   border: 1px solid var(--dark-grey);
   background: var(--basic-grey);
   box-shadow: 0 10px 20px -4px rgba(var(--black), 0.2);
-}
-
-@media (max-width: 1023px) {
-  .footer__cookie {
-    position: relative;
-
-    width: 360px;
-    min-height: 78px;
-  }
 }
 
 .footer__cookie span {
@@ -3296,12 +3289,29 @@ img {
 
 @media (max-width: 1023px) {
   .footer__cookie span {
-    width: 227px;
+    width: 66.7%;
+    max-width: 420px;
+
     font-size: 12px;
   }
 }
 
+@media (max-width: 1023px) {
+  .footer__cookie-link-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+    width: 21.4%;
+    max-width: 165px;
+  }
+}
+
 .footer__link-cookie {
+  margin-right: 16px;
+
   font-weight: 500;
   font-size: 13px;
   line-height: 20px;
@@ -3310,10 +3320,8 @@ img {
 
 @media (max-width: 1023px) {
   .footer__link-cookie {
-    position: absolute;
-
-    right: 8px;
-    bottom: 8px;
+    margin-right: 0;
+    order: 2;
   }
 }
 
@@ -3324,13 +3332,6 @@ img {
 .footer__link-cookie:active {
   color: var(--light-green);
   opacity: 0.8;
-}
-
-@media (max-width: 1023px) {
-  .footer__button-cookie {
-    margin-left: 0;
-    margin-top: -28px;
-  }
 }
 
 /*=========МОДАЛЬНЫЕ ОКНА============*/
