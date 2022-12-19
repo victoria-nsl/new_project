@@ -350,3 +350,15 @@ const checkCookies = () => {
 if (cookieNotification) {
   checkCookies();
 }
+
+/*==========Переход на страницу личный кабинет пользователя==========*/
+const formModalLogIn = document.querySelector(".modal-log-in");
+
+if (formModalLogIn) {
+  const buttonLogIn = formModalLogIn.querySelector(".modal__button");
+
+  buttonLogIn.addEventListener(
+    "click",
+    () => (window.location.href = "user-account.html")
+  );
+}
