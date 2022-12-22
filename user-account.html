@@ -107,7 +107,418 @@
       </nav>
     </header>
 
-    <main></main>
+    <main class="main main--user-account container">
+      <h1 class="visually-hidden">Личный кабинет пользователя</h1>
+      <section class="change-info">
+        <h2 class="visually-hidden">Изменение данных</h2>
+
+        <div class="change-info__user">
+          <div class="change-info__user-img"><span>ИВ</span></div>
+          <h3 class="change-info__user-name">Иван Васильев</h3>
+          <p class="change-info__user-email">ivasilyev@gmail.com</p>
+          <p class="change-info__user-tariff">
+            Тарифный план <span>Free</span>
+          </p>
+          <a class="change-info__link-tariff" href="#">Сменить тариф</a>
+        </div>
+
+        <div class="change-info__tab tab">
+          <ul class="tab__buttons-list">
+            <li class="tab__button-item">
+              <button class="tab__button tab__button--active">
+                Учетная запись
+              </button>
+            </li>
+            <li class="tab__button-item">
+              <button class="tab__button">Вход и безопасность</button>
+            </li>
+            <li class="tab__button-item">
+              <button class="tab__button">Приложения</button>
+            </li>
+          </ul>
+
+          <div class="tab__content">
+            <ul class="tab__content-list">
+              <li class="tab__content-item tab__content-item--active">
+                <h3 class="tab__content-title">
+                  <button class="tab__accordion-button" type="button">
+                    <span>Учетная запись</span>
+                    <span class="tab__accordion-icon-button"></span>
+                  </button>
+                </h3>
+                <div class="tab__accordion-description">
+                  <form
+                    name="account-change"
+                    class="tab__form"
+                    action="#"
+                    method="post"
+                    target="_blank"
+                  >
+                    <div class="tab__form-item tab__form-item--photo-upload">
+                      <div class="tab__wrapper-photo-upload">
+                        <span>ИВ</span>
+                      </div>
+                      <div class="tab__wrapper-button-upload">
+                        <h4 class="tab__photo-title">Фото профиля</h4>
+                        <div class="tab__button-upload">
+                          <input
+                            type="file"
+                            class="visually-hidden tab__input-upload"
+                            id="photo-upload"
+                          />
+                          <label class="tab__photo-label" for="photo-upload">
+                            <svg
+                              width="24"
+                              height="16"
+                              viewBox="0 0 24 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M12 12L12 6M12 6L9 8M12 6L15 8M23 11C23 8.79086 21.2091 7 19 7C18.9764 7 18.9532 7.00021 18.9297 7.00062C18.4447 3.60802 15.5267 1 12 1C9.20335 1 6.79019 2.64004 5.66895 5.01082C3.06206 5.18144 1 7.34995 1 9.99999C1 12.7614 3.23858 15 6 15H19C21.2091 15 23 13.2091 23 11Z"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                            <span>Загрузить фото</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab__form-item">
+                      <label for="name">Имя</label>
+                      <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Имя"
+                        pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                        required
+                      />
+                    </div>
+
+                    <div class="tab__form-item">
+                      <label for="surname">Фамилия</label>
+                      <input
+                        id="surname"
+                        type="text"
+                        name="surname"
+                        placeholder="Фамилия"
+                        pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                        required
+                      />
+                    </div>
+
+                    <div class="tab__form-item">
+                      <label for="email-sign-up">Электронная почта</label>
+                      <input
+                        type="email"
+                        id="email-sign-up"
+                        name="email"
+                        placeholder="Электронная почта"
+                        required
+                      />
+                    </div>
+
+                    <div class="tab__form-item tab__form-item--select">
+                      <label for="language"> Язык </label>
+                      <select name="language" id="language">
+                        <option value="ru">Русский</option>
+                        <option value="eng">Английский</option>
+                      </select>
+                    </div>
+
+                    <ul class="tab__buttons-form-list">
+                      <li class="tab__button-form-item">
+                        <button class="button-reset" type="reset">
+                          Отменить
+                        </button>
+                      </li>
+
+                      <li class="tab__button-form-item">
+                        <button type="submit" class="button-green">
+                          Сохранить изменения
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </li>
+
+              <li class="tab__content-item tab__content-item--closed">
+                <h3 class="tab__content-title">
+                  <button class="tab__accordion-button" type="button">
+                    <span>Вход и безопасность</span>
+                    <span class="tab__accordion-icon-button"></span>
+                  </button>
+                </h3>
+                <div class="tab__accordion-description">
+                  <form
+                    name="password-change"
+                    class="tab__form"
+                    action="#"
+                    method="post"
+                    target="_blank"
+                  >
+                    <div
+                      class="tab__form-item tab__form-item--password"
+                      data-password
+                    >
+                      <label for="password-old">Старый пароль</label>
+                      <input
+                        type="password"
+                        id="password-old"
+                        name="password-old"
+                        placeholder="Введите старый пароль"
+                        minlength="8"
+                        required
+                      />
+                      <div class="tab__wrapper-icon-password">
+                        <input
+                          class="tab__input-password-checkbox visually-hidden"
+                          id="show-password-old"
+                          type="checkbox"
+                          name="show-password"
+                        />
+                        <label
+                          for="show-password-old"
+                          aria-label="Показать/скрыть пароль"
+                        ></label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab__form-item tab__form-item--password"
+                      data-password
+                    >
+                      <label for="password-repeat">Новый пароль</label>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Придумайте новый пароль"
+                        minlength="8"
+                        required
+                      />
+                      <div class="tab__wrapper-icon-password">
+                        <input
+                          class="tab__input-password-checkbox visually-hidden"
+                          id="show-password"
+                          type="checkbox"
+                          name="show-password"
+                        />
+                        <label
+                          for="show-password"
+                          aria-label="Показать/скрыть пароль"
+                        ></label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="tab__form-item tab__form-item--password"
+                      data-password
+                    >
+                      <label for="password-repeat">Повторите пароль</label>
+                      <input
+                        type="password"
+                        id="password-repeat"
+                        name="password-repeat"
+                        placeholder="Повторите новый пароль"
+                        minlength="8"
+                        required
+                      />
+                      <div class="tab__wrapper-icon-password">
+                        <input
+                          class="tab__input-password-checkbox visually-hidden"
+                          id="show-password-repeat"
+                          type="checkbox"
+                          name="show-password"
+                        />
+                        <label
+                          for="show-password-repeat"
+                          aria-label="Показать/скрыть пароль"
+                        ></label>
+                      </div>
+                    </div>
+
+                    <p class="tab__message">
+                      Последнее обновление пароля <span>31.04.2020</span>
+                    </p>
+
+                    <ul class="tab__buttons-form-list">
+                      <li class="tab__button-form-item">
+                        <button class="button-reset" type="reset">
+                          Отменить
+                        </button>
+                      </li>
+
+                      <li class="tab__button-form-item">
+                        <button type="submit" class="button-green">
+                          Сохранить изменения
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </li>
+
+              <li
+                class="tab__content-item tab__content-item--app tab__content-item--closed"
+              >
+                <h3 class="tab__content-title">
+                  <button class="tab__accordion-button" type="button">
+                    <span>Приложения</span>
+                    <span class="tab__accordion-icon-button"></span>
+                  </button>
+                </h3>
+
+                <div class="tab__wrapper-app-list tab__accordion-description">
+                  <ul class="tab__app-list">
+                    <li class="tab__app-item tab__app-item--title">
+                      <h4 class="tab__app-name tab__app-name--title">
+                        Приложение
+                      </h4>
+                      <p class="tab__app-tariff tab__app-tariff--title">
+                        Тариф
+                      </p>
+                      <p class="tab__app-empty"></p>
+                    </li>
+
+                    <li class="tab__app-item">
+                      <h4 class="tab__app-name">Длинное название приложения</h4>
+                      <p class="tab__app-tariff">Тариф</p>
+
+                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                    </li>
+
+                    <li class="tab__app-item">
+                      <h4 class="tab__app-name">Длинное название приложения</h4>
+                      <p class="tab__app-tariff">Тариф</p>
+
+                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                    </li>
+
+                    <li class="tab__app-item">
+                      <h4 class="tab__app-name">Длинное название приложения</h4>
+                      <p class="tab__app-tariff">Тариф</p>
+
+                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                    </li>
+                  </ul>
+
+                  <button class="tab__app-button">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 20C4.47967 19.994 0.00606237 15.5204 0 10V9.80002C0.109931 4.30455 4.63459 -0.0720257 10.1307 0.000898217C15.6268 0.0738221 20.0337 4.5689 19.9978 10.0654C19.9619 15.5618 15.4966 19.9989 10 20ZM5 9.00002V11H9V15H11V11H15V9.00002H11V5.00002H9V9.00002H5Z"
+                      /></svg
+                    >Добавить приложение
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="tariffs tariffs--user-account" id="tariffs">
+        <h2 class="tariffs__title title">Сравнение тарифных планов</h2>
+        <p class="tariffs__description">
+          Если вы хотите работать без ограничений и иметь доступ к полной
+          версии, <a class="tariffs__link" href="#">напишите нам на почту</a>
+        </p>
+
+        <ul class="tariffs__list">
+          <li class="tariffs__item">
+            <div class="tariffs__inner-item">
+              <h3 class="tariffs__title-item">Free</h3>
+              <p class="tariffs__description-item">
+                Идеально подходит для тех, кому нужен быстрый доступ к основным
+                функциям.
+              </p>
+              <p class="tariffs__price-item">
+                <span>0 ₽</span>
+                <span>/месяц</span>
+              </p>
+              <a class="button-tariffs" href="#">Попробовать</a>
+            </div>
+            <ul class="tariffs__list-detailing">
+              <li class="tariffs__item-detailing">
+                Модули Manager и Dashboards
+              </li>
+              <li class="tariffs__item-detailing">1 пользователь</li>
+              <li class="tariffs__item-detailing">До 5 датасетов</li>
+              <li class="tariffs__item-detailing">
+                До 10 показателей в датасете
+              </li>
+              <li class="tariffs__item-detailing">
+                Неограниченное количество дашбордов
+              </li>
+              <li class="tariffs__item-detailing">До Х виджетов</li>
+              <li class="tariffs__item-detailing">
+                Загрузка компонентов в Dashboards
+              </li>
+              <li class="tariffs__item-detailing tariffs__item-detailing--not">
+                Шаринг
+              </li>
+              <li class="tariffs__item-detailing tariffs__item-detailing--not">
+                Экспорт
+              </li>
+              <li class="tariffs__item-detailing tariffs__item-detailing--not">
+                Подключение дополнительных источников
+              </li>
+            </ul>
+          </li>
+
+          <li class="tariffs__item tariffs__item--light">
+            <div class="tariffs__inner-item">
+              <h3 class="tariffs__title-item tariffs__title-item--light">
+                Light
+              </h3>
+              <p
+                class="tariffs__description-item tariffs__description-item--light"
+              >
+                Идеально подходит для тех, кому нужны расширенные функции
+                и инструменты.
+              </p>
+              <p class="tariffs__price-item tariffs__price-item--light">
+                <span>500 ₽</span>
+                <span>/месяц</span>
+              </p>
+              <a class="button-blue button-blue--tariffs" href="#"
+                >Попробовать</a
+              >
+            </div>
+            <ul class="tariffs__list-detailing">
+              <li class="tariffs__item-detailing">
+                Модули Manager, Dashboards + внешние
+              </li>
+              <li class="tariffs__item-detailing">До 10 пользователей</li>
+              <li class="tariffs__item-detailing">До 5 датасетов</li>
+              <li class="tariffs__item-detailing">До Х датасетов</li>
+              <li class="tariffs__item-detailing">
+                Неограниченное количество дашбордов
+              </li>
+              <li class="tariffs__item-detailing">До Х виджетов</li>
+              <li class="tariffs__item-detailing">
+                Загрузка компонентов в Dashboards
+              </li>
+              <li class="tariffs__item-detailing">Шаринг</li>
+              <li class="tariffs__item-detailing">Экспорт</li>
+              <li class="tariffs__item-detailing">
+                Подключение дополнительных источников
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="container">

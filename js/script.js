@@ -1,11 +1,15 @@
 const MAX_WIDTH_TABLET = 1439;
+const MAX_WIDTH_MOBILE = 1023;
+
 const MIN_LENGTH_PASSWORD = 8;
 
 const MESSAGE_EMPTY = "Поле обязательно для заполнения";
 const MESSAGE_NAME = "Ввести данные можно на русском языке  и латиницей";
-const MESSAGE_EMAIL = "Email некорректный";
+const MESSAGE_EMAIL = "Введите корректный адрес электронной почты";
 const MESSAGE_PASSWORD = "Минимум 8 символов";
 const MESSAGE_PASSWORD_REPEAT = "Пароли должны совпадать";
+
+const FILE_TYPES = ["gif", "jpg", "jpeg", "png"];
 
 const page = document.body;
 const menu = document.querySelector(".navigation");
@@ -14,7 +18,7 @@ const buttonSignUp = document.querySelector(".navigation__button-sign-up");
 const buttonLogIn = document.querySelector(".navigation__button-log-in");
 const overlayPopupSignUp = document.querySelector(".modal-sign-up");
 const overlayPopupLogIn = document.querySelector(".modal-log-in");
-const formsModal = document.querySelectorAll(".modal form");
+const forms = document.querySelectorAll("form");
 
 const buttonСookies = document.querySelector(".main-screen__button");
 
@@ -23,13 +27,18 @@ const blockAccordionPlatformInstallation = document.querySelector(
 );
 const blockAccordionFaq = document.querySelector(".accordion__list--faq");
 
-const checkboxsShowPassword = document.querySelectorAll(
-  ".modal__input-password-checkbox"
+const checkboxsShowPasswordModal = document.querySelectorAll(
+  ".modal__input-password-checkbox, .tab__input-password-checkbox"
 );
 
 const cookieNotification = document.querySelector(".footer__wrapper-cookie");
+const blockTabUserAccount = document.querySelector(".tab");
+const blockTariffs = document.querySelector(".tariffs--user-account");
+const blockPhotoUpload = document.querySelector(
+  ".tab__form-item--photo-upload"
+);
 
-/*---------------Aккордeон--------------*/
+/*---------------АККОРДЕОНЫ на главной странице--------------*/
 const hideContent = (item) => {
   item.classList.remove("accordion__item--active");
   item.classList.add("accordion__item--closed");
@@ -162,7 +171,6 @@ if (menu && page.clientWidth < MAX_WIDTH_TABLET) {
 }
 
 /*===============ОТКРЫТИЕ/ЗАКРЫТИЕ МОДАЛЬНЫХ ОКОН==============*/
-
 const openPopup = (overlayPopup, inputModal) => {
   overlayPopup.classList.add("modal__show");
   page.classList.add("page-no-scroll");
@@ -259,11 +267,11 @@ if (overlayPopupSignUp && overlayPopupLogIn) {
 }
 
 /*=========КНОПКА ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ=============*/
-if (checkboxsShowPassword) {
-  checkboxsShowPassword.forEach((inputCheckbox) => {
+if (checkboxsShowPasswordModal) {
+  checkboxsShowPasswordModal.forEach((inputCheckbox) => {
     inputCheckbox.addEventListener("change", () => {
-      const inputPassword = inputCheckbox.closest(".modal__wrapper-password")
-        .children[1];
+      const inputPassword =
+        inputCheckbox.closest("div[data-password]").children[1];
       if (inputCheckbox.checked) {
         inputPassword.type = "text";
         return;
@@ -276,7 +284,7 @@ if (checkboxsShowPassword) {
 /*================ВАЛИДАЦИЯ ФОРМЫ============*/
 const hideError = (field, error) => {
   field.addEventListener("input", () => {
-    field.classList.remove("modal__invalid-input");
+    field.classList.remove("invalid-input");
     error.remove();
   });
 };
@@ -289,23 +297,23 @@ const showError = (field, message) => {
     return;
   }
 
-  field.classList.add("modal__invalid-input");
+  field.classList.add("invalid-input");
 
   const error = document.createElement("div");
   field.after(error);
-  error.classList.add("modal__error");
+  error.classList.add("error");
   error.textContent = message;
 
   hideError(field, error);
 };
 
-if (formsModal) {
-  formsModal.forEach((form) => {
+if (forms) {
+  forms.forEach((form) => {
     const inputsForm = form.querySelectorAll("input");
 
     inputsForm.forEach((input) => {
       input.addEventListener("blur", () => {
-        if (input.value.length === 0) {
+        if (input.value.length === 0 && input.type !== "file") {
           showError(input, MESSAGE_EMPTY);
         } else if (
           (input.name === "name" || input.name === "surname") &&
@@ -315,7 +323,7 @@ if (formsModal) {
         } else if (input.type === "email" && !input.validity.valid) {
           showError(input, MESSAGE_EMAIL);
         } else if (
-          input.name === "password" &&
+          (input.name === "password" || input.name === "password-old") &&
           input.value.length < MIN_LENGTH_PASSWORD
         ) {
           showError(input, MESSAGE_PASSWORD);
@@ -351,7 +359,115 @@ if (cookieNotification) {
   checkCookies();
 }
 
-/*==========Переход на страницу личный кабинет пользователя==========*/
+/*=====ТАБЫ, АККОРДЕОН(на моб.версии) на странице личный кабинет пользователя==========*/
+if (blockTabUserAccount) {
+  if (page.clientWidth > MAX_WIDTH_MOBILE) {
+    const triggersUserAccount =
+      blockTabUserAccount.querySelectorAll(".tab__button");
+    const itemsUserAccount =
+      blockTabUserAccount.querySelectorAll(".tab__content-item");
+
+    triggersUserAccount.forEach((triggerUserAccount, index) => {
+      triggerUserAccount.addEventListener("click", () => {
+        triggersUserAccount.forEach((trigger) => {
+          if (trigger.classList.contains("tab__button--active")) {
+            trigger.classList.remove("tab__button--active");
+          }
+        });
+
+        triggerUserAccount === triggersUserAccount[2]
+          ? blockTariffs.classList.add("tariffs--show")
+          : blockTariffs.classList.remove("tariffs--show");
+
+        itemsUserAccount.forEach((item) => {
+          if (item.classList.contains("tab__content-item--active")) {
+            item.classList.remove("tab__content-item--active");
+          }
+        });
+
+        triggerUserAccount.classList.add("tab__button--active");
+        itemsUserAccount[index].classList.add("tab__content-item--active");
+      });
+    });
+  }
+
+  if (page.clientWidth < MAX_WIDTH_MOBILE) {
+    const itemsAccordion =
+      blockTabUserAccount.querySelectorAll(".tab__content-item");
+    const triggers = blockTabUserAccount.querySelectorAll(
+      ".tab__accordion-button"
+    );
+
+    triggers.forEach((trigger, index) => {
+      trigger.addEventListener("click", () => {
+        const itemAccordionCurrent = itemsAccordion[index];
+
+        if (
+          itemAccordionCurrent.classList.contains("tab__content-item--active")
+        ) {
+          itemAccordionCurrent.classList.remove("tab__content-item--active");
+          itemAccordionCurrent.classList.add("tab__content-item--closed");
+          if (itemAccordionCurrent === itemsAccordion[2])
+            blockTariffs.classList.remove("tariffs--show");
+          return;
+        }
+
+        itemsAccordion.forEach((itemAccordion) => {
+          if (itemAccordion.classList.contains("tab__content-item--active")) {
+            itemAccordion.classList.remove("tab__content-item--active");
+            itemAccordion.classList.add("tab__content-item--closed");
+          }
+        });
+
+        itemAccordionCurrent.classList.add("tab__content-item--active");
+        itemAccordionCurrent.classList.remove("tab__content-item--closed");
+
+        trigger === triggers[2]
+          ? blockTariffs.classList.add("tariffs--show")
+          : blockTariffs.classList.remove("tariffs--show");
+      });
+    });
+  }
+}
+
+/*--------------ЗАГРУЗКА ФОТО------------*/
+if (blockPhotoUpload) {
+  const wrapperPhoto = blockPhotoUpload.querySelector(
+    ".tab__wrapper-photo-upload"
+  );
+  const initials = wrapperPhoto.querySelector("span");
+
+  const fileChooserPhoto = blockPhotoUpload.querySelector(".tab__input-upload");
+
+  const uploadPhoto = (fileChooser, preview) => {
+    const file = fileChooser.files[0];
+    const fileName = file.name.toLowerCase();
+
+    const matches = FILE_TYPES.some((it) => fileName.endsWith(it));
+
+    if (matches) {
+      const reader = new FileReader();
+
+      reader.addEventListener("load", () => {
+        preview.src = reader.result;
+      });
+
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const previewPhoto = document.createElement("img");
+
+  fileChooserPhoto.addEventListener("change", () => {
+    wrapperPhoto.appendChild(previewPhoto);
+    if (initials) {
+      initials.remove();
+    }
+    uploadPhoto(fileChooserPhoto, previewPhoto);
+  });
+}
+
+/*==========ПЕРЕХОД НА СТРАНИЦУ ЛИЧНЫЙ КАБИНЕТ ПОЛЬЗОВАТЕЛЯ=======ВРЕМЕННО!!!==========*/
 const formModalLogIn = document.querySelector(".modal-log-in");
 
 if (formModalLogIn) {
