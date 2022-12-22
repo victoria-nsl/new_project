@@ -391,7 +391,7 @@ if (blockTabUserAccount) {
     });
   }
 
-  if (page.clientWidth < MAX_WIDTH_MOBILE) {
+  if (page.clientWidth <= MAX_WIDTH_MOBILE) {
     const itemsAccordion =
       blockTabUserAccount.querySelectorAll(".tab__content-item");
     const triggers = blockTabUserAccount.querySelectorAll(
