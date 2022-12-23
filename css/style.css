@@ -4252,6 +4252,10 @@ img {
   stroke: rgba(var(--light-green-rgb), 0.76);
 }
 
+.tab__form-item--photo-upload input {
+  width: 0;
+}
+
 .tab__input-upload:focus-visible + label {
   outline: 2px solid var(--basic-white);
 }
