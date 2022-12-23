@@ -119,7 +119,7 @@
           <p class="change-info__user-tariff">
             Тарифный план <span>Free</span>
           </p>
-          <a class="change-info__link-tariff" href="#">Сменить тариф</a>
+          <a class="change-info__link-tariff" href="#tariffs">Сменить тариф</a>
         </div>
 
         <div class="change-info__tab tab">
@@ -221,13 +221,14 @@
                       />
                     </div>
 
-                    <div class="tab__form-item tab__form-item--select">
+                    <!--не известно, будет ли этот раздел-->
+                    <!-- <div class="tab__form-item tab__form-item--select">
                       <label for="language"> Язык </label>
                       <select name="language" id="language">
                         <option value="ru">Русский</option>
                         <option value="eng">Английский</option>
                       </select>
-                    </div>
+                    </div> -->
 
                     <ul class="tab__buttons-form-list">
                       <li class="tab__button-form-item">
@@ -389,37 +390,29 @@
                       <h4 class="tab__app-name">Длинное название приложения</h4>
                       <p class="tab__app-tariff">Тариф</p>
 
-                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                      <a class="tab__app-item-link" href="#tariffs"
+                        >Улучшить тариф</a
+                      >
                     </li>
 
                     <li class="tab__app-item">
                       <h4 class="tab__app-name">Длинное название приложения</h4>
                       <p class="tab__app-tariff">Тариф</p>
 
-                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                      <a class="tab__app-item-link" href="#tariffs"
+                        >Улучшить тариф</a
+                      >
                     </li>
 
                     <li class="tab__app-item">
                       <h4 class="tab__app-name">Длинное название приложения</h4>
                       <p class="tab__app-tariff">Тариф</p>
 
-                      <a class="tab__app-item-link" href="#">Улучшить тариф</a>
+                      <a class="tab__app-item-link" href="#tariffs"
+                        >Улучшить тариф</a
+                      >
                     </li>
                   </ul>
-
-                  <button class="tab__app-button">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10 20C4.47967 19.994 0.00606237 15.5204 0 10V9.80002C0.109931 4.30455 4.63459 -0.0720257 10.1307 0.000898217C15.6268 0.0738221 20.0337 4.5689 19.9978 10.0654C19.9619 15.5618 15.4966 19.9989 10 20ZM5 9.00002V11H9V15H11V11H15V9.00002H11V5.00002H9V9.00002H5Z"
-                      /></svg
-                    >Добавить приложение
-                  </button>
                 </div>
               </li>
             </ul>
@@ -431,7 +424,10 @@
         <h2 class="tariffs__title title">Сравнение тарифных планов</h2>
         <p class="tariffs__description">
           Если вы хотите работать без ограничений и иметь доступ к полной
-          версии, <a class="tariffs__link" href="#">напишите нам на почту</a>
+          версии,
+          <a class="tariffs__link" href="mailto:sales@polymatica.ru"
+            >напишите нам на почту</a
+          >
         </p>
 
         <ul class="tariffs__list">

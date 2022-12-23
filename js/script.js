@@ -38,6 +38,8 @@ const blockPhotoUpload = document.querySelector(
   ".tab__form-item--photo-upload"
 );
 
+const buttonСhangeTariff = document.querySelector(".change-info__link-tariff");
+
 /*---------------АККОРДЕОНЫ на главной странице--------------*/
 const hideContent = (item) => {
   item.classList.remove("accordion__item--active");
@@ -196,74 +198,74 @@ if (overlayPopupSignUp && overlayPopupLogIn) {
   const buttonLogInInPopup = overlayPopupSignUp.querySelector(".modal__link");
   const buttonSignUpInPopup = overlayPopupLogIn.querySelector(".modal__link");
 
-  //нажатие на кнопку Esc при открытом попапе
-  const onPopupLogInEscKeydown = (evt) => {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      closePopup(overlayPopupLogIn);
-      document.removeEventListener("keydown", onPopupLogInEscKeydown);
-    }
-  };
+  const buttonClosePopupSignUp = overlayPopupSignUp.querySelector(
+    ".modal__button-close"
+  );
+  const buttonClosePopupLogIn = overlayPopupLogIn.querySelector(
+    ".modal__button-close"
+  );
 
-  const onPopupSignUpEscKeydown = (evt) => {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      closePopup(overlayPopupSignUp);
-      document.removeEventListener("keydown", onPopupSignUpEscKeydown);
-    }
-  };
   //нажатие на оверлей попапа
-  const onClickOverlayPopupSignUp = (evt) => {
+  const onClickOverlayPopup = (evt) => {
     if (evt.target.matches("section")) {
-      closePopup(overlayPopupSignUp);
+      closePopup(evt.target);
     }
   };
 
-  const onClickOverlayPopupLogIn = (evt) => {
-    if (evt.target.matches("section")) {
-      closePopup(overlayPopupLogIn);
+  //нажатие на кнопку Esc при открытом попапе
+  const onPopupEscKeydown = (evt, overlayPopup) => {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      closePopup(overlayPopup);
+      document.removeEventListener("keydown", onPopupEscKeydown);
     }
   };
 
   //нажатие на кнопки зарегистрировать, войти в шапке
-  const onClickButtonSignUp = (evt) => {
+  const onClickButton = (evt, overlayPopup) => {
     evt.preventDefault();
-    const inputNamePopup = overlayPopupSignUp.querySelector("#name");
-    openPopup(overlayPopupSignUp, inputNamePopup);
-    getElementsFocusable(overlayPopupSignUp);
-    document.addEventListener("keydown", onPopupSignUpEscKeydown);
-  };
 
-  const onClickButtonLogIn = (evt) => {
-    evt.preventDefault();
-    const inputEmailPopup = overlayPopupLogIn.querySelector("#email-log-in");
-    openPopup(overlayPopupLogIn, inputEmailPopup);
-    getElementsFocusable(overlayPopupLogIn);
-    document.addEventListener("keydown", onPopupLogInEscKeydown);
+    inputFocus = overlayPopup.querySelectorAll("form input")[0];
+
+    openPopup(overlayPopup, inputFocus);
+    getElementsFocusable(overlayPopup);
+    document.addEventListener("keydown", (evt) =>
+      onPopupEscKeydown(evt, overlayPopup)
+    );
   };
 
   //нажатие на кнопки зарегистрировать, войти в попапах
-  const onClickButtonLogInInPopup = (evt) => {
+  const onClickButtonInPopup = (evt, overlayPopup) => {
     evt.preventDefault();
-    closePopup(overlayPopupSignUp);
-    onClickButtonLogIn(evt);
-  };
-
-  const onClickButtonSignUpInPopup = (evt) => {
-    evt.preventDefault();
-    closePopup(overlayPopupLogIn);
-    onClickButtonSignUp(evt);
+    closePopup(overlayPopup);
+    overlayPopup === overlayPopupSignUp
+      ? onClickButton(evt, overlayPopupLogIn)
+      : onClickButton(evt, overlayPopupSignUp);
   };
 
   /*----------Модальное окно с формой регистрации -----------*/
-  overlayPopupSignUp.addEventListener("click", onClickOverlayPopupSignUp);
-  buttonSignUp.addEventListener("click", onClickButtonSignUp);
-  buttonLogInInPopup.addEventListener("click", onClickButtonLogInInPopup);
+  overlayPopupSignUp.addEventListener("click", onClickOverlayPopup);
+  buttonClosePopupSignUp.addEventListener("click", () =>
+    closePopup(overlayPopupSignUp)
+  );
+  buttonSignUp.addEventListener("click", (evt) =>
+    onClickButton(evt, overlayPopupSignUp)
+  );
+  buttonLogInInPopup.addEventListener("click", (evt) =>
+    onClickButtonInPopup(evt, overlayPopupSignUp)
+  );
 
   /*----------Модальное окно с формой логина -----------*/
-  overlayPopupLogIn.addEventListener("click", onClickOverlayPopupLogIn);
-  buttonLogIn.addEventListener("click", onClickButtonLogIn);
-  buttonSignUpInPopup.addEventListener("click", onClickButtonSignUpInPopup);
+  overlayPopupLogIn.addEventListener("click", onClickOverlayPopup);
+  buttonClosePopupLogIn.addEventListener("click", () =>
+    closePopup(overlayPopupLogIn)
+  );
+  buttonLogIn.addEventListener("click", (evt) =>
+    onClickButton(evt, overlayPopupLogIn)
+  );
+  buttonSignUpInPopup.addEventListener("click", (evt) =>
+    onClickButtonInPopup(evt, overlayPopupLogIn)
+  );
 }
 
 /*=========КНОПКА ПОКАЗАТЬ/СКРЫТЬ ПАРОЛЬ=============*/
@@ -428,6 +430,14 @@ if (blockTabUserAccount) {
       });
     });
   }
+}
+
+if (buttonСhangeTariff) {
+  buttonСhangeTariff.addEventListener("click", () => {
+    if (!blockTariffs.classList.contains("tariffs--show")) {
+      blockTariffs.classList.add("tariffs--show");
+    }
+  });
 }
 
 /*--------------ЗАГРУЗКА ФОТО------------*/

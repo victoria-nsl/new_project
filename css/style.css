@@ -364,11 +364,14 @@ img {
 }
 
 .button-tariffs:hover {
-  opacity: 0.8;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 .button-tariffs:active {
-  opacity: 0.6;
+  color: var(--basic-black);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24)),
+    var(--basic-white);
 }
 
 .button-cookie {
@@ -611,14 +614,6 @@ img {
     transition: all 0.5s ease-in-out;
   }
 
-  .navigation__button:hover {
-    opacity: 0.8;
-  }
-
-  .navigation__button:active {
-    opacity: 0.6;
-  }
-
   .navigation--closed .navigation__button {
     width: 32px;
     height: 32px;
@@ -641,6 +636,15 @@ img {
     background-color: var(--basic-white);
     border-radius: 2px;
     box-shadow: 0 7px 0 0 var(--basic-white), 0 14px 0 0 var(--basic-white);
+  }
+
+  .navigation--closed .navigation__button:hover::after {
+    background-color: var(--green);
+    box-shadow: 0 7px 0 0 var(--green), 0 14px 0 0 var(--green);
+  }
+
+  .navigation--closed .navigation__button:active::after {
+    opacity: 0.8;
   }
 
   .navigation--opened .navigation__button {
@@ -677,6 +681,22 @@ img {
 
     background-color: var(--basic-white);
   }
+}
+
+.navigation--opened .navigation__button:hover:after {
+  background-color: var(--green);
+}
+
+.navigation--opened .navigation__button:hover:before {
+  background-color: var(--green);
+}
+
+.navigation--opened .navigation__button:active::after {
+  opacity: 0.8;
+}
+
+.navigation--opened .navigation__button:active::before {
+  opacity: 0.8;
 }
 
 .navigation__logo-link {
@@ -1222,14 +1242,15 @@ img {
 }
 
 .dashboard-settings__wrapper-description {
-  width: 100%;
+  width: 842px;
+  margin: 0 auto;
   margin-bottom: 32px;
 }
 
 @media (max-width: 1023px) {
   .dashboard-settings__wrapper-description {
+    width: 100%;
     max-width: 864px;
-    margin: 0 auto;
     margin-bottom: 20px;
   }
 }
@@ -2615,15 +2636,16 @@ img {
 }
 
 .tariffs__link {
-  color: var(--blue);
+  text-decoration-line: underline;
+  color: var(--green);
 }
 
 .tariffs__link:hover {
-  opacity: 0.8;
+  color: var(--light-green);
 }
 
 .tariffs__link:active {
-  opacity: 0.6;
+  color: rgba(var(--light-green-rgb), 0.76);
 }
 
 .tariffs__list {
@@ -3359,11 +3381,11 @@ img {
 }
 
 .footer__link:hover {
-  opacity: 0.8;
+  color: var(--green);
 }
 
 .footer__link:active {
-  opacity: 0.6;
+  text-decoration: underline;
 }
 
 /*-----Куки-------*/
@@ -3703,6 +3725,63 @@ img {
 
 .modal__wrapper-icon-password input:checked:focus-visible + label::before {
   outline: 1px solid var(--basic-white);
+}
+
+/*------Кнопка открытия/закрытия окна------------*/
+.modal__button-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__button-close::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(45deg);
+  content: "";
+
+  width: 35px;
+  height: 2px;
+
+  background-color: var(--basic-white);
+}
+
+.modal__button-close::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(-45deg);
+  content: "";
+
+  width: 35px;
+  height: 2px;
+
+  background-color: var(--basic-white);
+}
+
+.modal__button-close:hover:after {
+  background-color: var(--green);
+}
+
+.modal__button-close:hover:before {
+  background-color: var(--green);
+}
+
+.modal__button-close:active::after {
+  opacity: 0.8;
+}
+
+.modal__button-close:active::before {
+  opacity: 0.8;
 }
 
 /*==================ЛИЧНЫЙ КАБИНЕТ ПОЛЬЗОВАТЕЛЯ============================*/
@@ -4229,6 +4308,7 @@ img {
   font-size: 18px;
   line-height: 22px;
   color: var(--green);
+  text-decoration-line: underline;
 
   transition: all 0.2s ease-in-out;
 }
@@ -4256,7 +4336,7 @@ img {
 }
 
 .tab__form-item--photo-upload input {
-  width: 0;
+  width: 1px;
   padding: 0;
   border: none;
 }
