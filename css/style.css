@@ -3834,6 +3834,9 @@ img {
 @media (max-width: 1023px) {
   .tab {
     padding-top: 0;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
   }
 }
 
@@ -4254,6 +4257,8 @@ img {
 
 .tab__form-item--photo-upload input {
   width: 0;
+  padding: 0;
+  border: none;
 }
 
 .tab__input-upload:focus-visible + label {
